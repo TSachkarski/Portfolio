@@ -226,11 +226,22 @@ nav.sc .nav-hamburger span{background:var(--black)}
   font-size:.8rem;font-weight:700;
   letter-spacing:.18em;text-transform:uppercase;
   text-decoration:none;background:none;
-  transition:background .3s,color .3s;
+  transition:background .3s,color .3s,border-color .3s;
 }
 .btn-outline-manga:hover{background:var(--black);color:var(--cream)}
 .btn-outline-manga .arr{transition:transform .3s}
 .btn-outline-manga:hover .arr{transform:translateX(6px)}
+
+/* Inside the black cs-cta-bar — invert so it's visible */
+.cs-cta-bar .btn-outline-manga{
+  border-color:rgba(240,237,230,0.5);
+  color:var(--cream);
+}
+.cs-cta-bar .btn-outline-manga:hover{
+  background:var(--cream);
+  border-color:var(--cream);
+  color:var(--black);
+}
 
 /* ── HERO RIGHT — manga panels ── */
 .hero-right{
@@ -713,7 +724,8 @@ footer{
   font-size:1.1rem;font-style:italic;letter-spacing:.03em;
   color:var(--cream);line-height:1.6;margin:0;
 }
-.cs-table{width:100%;border-collapse:collapse;margin:20px 0}
+.cs-table-wrap{width:100%;margin:20px 0}
+.cs-table{width:100%;border-collapse:collapse}
 .cs-table th{
   background:var(--black);color:var(--cream);
   font-family:'Barlow Condensed',sans-serif;
@@ -727,6 +739,40 @@ footer{
 }
 .cs-table td strong{color:var(--black);font-weight:600}
 .cs-table tr:nth-child(even) td{background:rgba(240,237,230,0.45)}
+
+/* ── RESPONSIVE TABLE — stacks to cards on mobile ── */
+@media(max-width:600px){
+  .cs-table thead{display:none}
+  .cs-table,
+  .cs-table tbody,
+  .cs-table tr,
+  .cs-table td{display:block;width:100%}
+  .cs-table tr{
+    border:1px solid var(--light);
+    margin-bottom:12px;
+    background:var(--cream);
+  }
+  .cs-table tr:nth-child(even) td{background:transparent}
+  .cs-table td{
+    padding:10px 16px;
+    border-bottom:1px solid rgba(17,16,16,0.07);
+    font-size:.88rem;
+    position:relative;
+    padding-left:45%;
+  }
+  .cs-table td:last-child{border-bottom:none}
+  .cs-table td::before{
+    content:attr(data-label);
+    position:absolute;
+    left:16px;top:10px;
+    width:40%;
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:.62rem;font-weight:700;
+    letter-spacing:.1em;text-transform:uppercase;
+    color:var(--red);
+    white-space:nowrap;
+  }
+}
 .cs-grid2{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--black);margin:24px 0}
 .cs-card{background:var(--cream2);padding:28px}
 .cs-card-num{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--red);line-height:1;margin-bottom:6px}
@@ -1380,15 +1426,37 @@ function loadIframe(id){
         <div class="cs-sec-label">03 — The Process</div>
         <h3>HIERARCHY FIRST. SYSTEM BEFORE SCREENS.</h3>
         <p>The first question was not "what should this look like" but "what does an agent actually need to know, in what order, and how often?" I mapped information into four tiers before touching any design tool.</p>
+        <div class="cs-table-wrap">
         <table class="cs-table">
           <thead><tr><th>Tier</th><th>Information</th><th>Glance Frequency</th><th>Design Response</th></tr></thead>
           <tbody>
-            <tr><td><strong>1 — Immediate</strong></td><td>Am I on schedule right now?</td><td>Every few minutes</td><td>KPI cards + NOW indicator always visible</td></tr>
-            <tr><td><strong>2 — Session</strong></td><td>How is today going overall?</td><td>Every 30–60 min</td><td>Dashboard with sparklines and alerts</td></tr>
-            <tr><td><strong>3 — Weekly</strong></td><td>Am I trending correctly?</td><td>Daily</td><td>Performance screen with trend tables</td></tr>
-            <tr><td><strong>4 — Structural</strong></td><td>What is my week, who do I report to?</td><td>Occasional</td><td>Schedule and Profile screens</td></tr>
+            <tr>
+              <td data-label="Tier"><strong>1 — Immediate</strong></td>
+              <td data-label="Information">Am I on schedule right now?</td>
+              <td data-label="Glance Frequency">Every few minutes</td>
+              <td data-label="Design Response">KPI cards + NOW indicator always visible</td>
+            </tr>
+            <tr>
+              <td data-label="Tier"><strong>2 — Session</strong></td>
+              <td data-label="Information">How is today going overall?</td>
+              <td data-label="Glance Frequency">Every 30–60 min</td>
+              <td data-label="Design Response">Dashboard with sparklines and alerts</td>
+            </tr>
+            <tr>
+              <td data-label="Tier"><strong>3 — Weekly</strong></td>
+              <td data-label="Information">Am I trending correctly?</td>
+              <td data-label="Glance Frequency">Daily</td>
+              <td data-label="Design Response">Performance screen with trend tables</td>
+            </tr>
+            <tr>
+              <td data-label="Tier"><strong>4 — Structural</strong></td>
+              <td data-label="Information">What is my week, who do I report to?</td>
+              <td data-label="Glance Frequency">Occasional</td>
+              <td data-label="Design Response">Schedule and Profile screens</td>
+            </tr>
           </tbody>
         </table>
+        </div>
 
         <!-- Process artefact: Information architecture sketch -->
         <div style="margin:32px 0;background:var(--cream2);border:2px solid var(--black);padding:28px 32px">
@@ -1690,16 +1758,43 @@ function loadIframe(id){
         <h3>SYSTEM BEFORE SCREENS. ALWAYS.</h3>
         <p>The project moved through four distinct phases. Each produced something concrete, and each informed what came next.</p>
         <p><strong>Phase 2 — Design System Before Pages.</strong> I built the full token system first: the six-colour palette, the Cormorant Garamond / DM Sans type pairing, the spacing scale, three motion curves, and the component library. Only then did I touch a page layout. Designing without a system produces pages that look different from each other — for a luxury brand, incoherence is fatal.</p>
+        <div class="cs-table-wrap">
         <table class="cs-table">
           <thead><tr><th>Token</th><th>Value</th><th>Usage</th><th>WCAG on Linen</th></tr></thead>
           <tbody>
-            <tr><td><strong>Obsidian</strong></td><td>#1A1A18</td><td>Primary text, headings</td><td>16.8:1 ✓</td></tr>
-            <tr><td><strong>Linen</strong></td><td>#F5F3EF</td><td>Main background</td><td>—</td></tr>
-            <tr><td><strong>Slate</strong></td><td>#5A5A53</td><td>Secondary text, metadata</td><td>6.27:1 ✓</td></tr>
-            <tr><td><strong>Sand</strong></td><td>#C8B89A</td><td>Decorative only — borders, accents on dark</td><td>1.76:1 ✗ (never as text)</td></tr>
-            <tr><td><strong>Charcoal</strong></td><td>#3D3D36</td><td>Product names, labels</td><td>9.87:1 ✓</td></tr>
+            <tr>
+              <td data-label="Token"><strong>Obsidian</strong></td>
+              <td data-label="Value">#1A1A18</td>
+              <td data-label="Usage">Primary text, headings</td>
+              <td data-label="WCAG">16.8:1 ✓</td>
+            </tr>
+            <tr>
+              <td data-label="Token"><strong>Linen</strong></td>
+              <td data-label="Value">#F5F3EF</td>
+              <td data-label="Usage">Main background</td>
+              <td data-label="WCAG">—</td>
+            </tr>
+            <tr>
+              <td data-label="Token"><strong>Slate</strong></td>
+              <td data-label="Value">#5A5A53</td>
+              <td data-label="Usage">Secondary text, metadata</td>
+              <td data-label="WCAG">6.27:1 ✓</td>
+            </tr>
+            <tr>
+              <td data-label="Token"><strong>Sand</strong></td>
+              <td data-label="Value">#C8B89A</td>
+              <td data-label="Usage">Decorative only — borders, accents on dark</td>
+              <td data-label="WCAG">1.76:1 ✗ (never as text)</td>
+            </tr>
+            <tr>
+              <td data-label="Token"><strong>Charcoal</strong></td>
+              <td data-label="Value">#3D3D36</td>
+              <td data-label="Usage">Product names, labels</td>
+              <td data-label="WCAG">9.87:1 ✓</td>
+            </tr>
           </tbody>
         </table>
+        </div>
 
         <!-- Process artefact: Design system architecture -->
         <div style="margin:32px 0;background:var(--cream2);border:2px solid var(--black);padding:28px 32px">
