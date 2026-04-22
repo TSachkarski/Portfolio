@@ -974,16 +974,35 @@ footer{
       <div class="sec-label reveal">// Selected Work</div>
       <h2 class="reveal">CASE STUDIES<br>THAT SHOW<br>THE WORK.</h2>
     </div>
-    <div class="proj-count reveal"><span>02</span></div>
+    <div class="proj-count reveal"><span>03</span></div>
   </div>
 
   <div class="proj-cards">
 
-    <div class="proj-item reveal" onclick="openCS('agentos')" role="button" tabindex="0" aria-label="Open AgentOS case study">
+    <div class="proj-item reveal" onclick="openCS('motion')" role="button" tabindex="0" aria-label="Open Motion Study case study">
       <div class="proj-ghost-num">01</div>
       <div class="proj-year-badge">2025</div>
       <div class="proj-content">
         <div class="proj-num-label">Case Study 01</div>
+        <div class="proj-name-row">Motion<br>Study</div>
+        <p class="proj-desc">7 categories of purposeful animation — micro-interactions, scroll effects, text reveals, SVG drawing, canvas particles, and 3D transforms. Zero libraries. Pure CSS & JS.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">Motion Design</span>
+          <span class="proj-tag">CSS Animation</span>
+          <span class="proj-tag">Vanilla JS</span>
+          <span class="proj-tag">No Dependencies</span>
+        </div>
+        <div class="proj-cta-row">
+          <span class="proj-cta-label">Read Case Study <span class="proj-cta-arrow">↗</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-item reveal rd1" onclick="openCS('agentos')" role="button" tabindex="0" aria-label="Open AgentOS case study">
+      <div class="proj-ghost-num">02</div>
+      <div class="proj-year-badge">2025</div>
+      <div class="proj-content">
+        <div class="proj-num-label">Case Study 02</div>
         <div class="proj-name-row">AgentOS</div>
         <p class="proj-desc">A real-time performance dashboard for contact center agents — designed to cut cognitive load and built as a fully accessible, animated prototype.</p>
         <div class="proj-tags">
@@ -998,11 +1017,11 @@ footer{
       </div>
     </div>
 
-    <div class="proj-item reveal rd1" onclick="openCS('forma')" role="button" tabindex="0" aria-label="Open Forma case study">
-      <div class="proj-ghost-num">02</div>
+    <div class="proj-item reveal rd2" onclick="openCS('forma')" role="button" tabindex="0" aria-label="Open Forma case study">
+      <div class="proj-ghost-num">03</div>
       <div class="proj-year-badge">2025</div>
       <div class="proj-content">
-        <div class="proj-num-label">Case Study 02</div>
+        <div class="proj-num-label">Case Study 03</div>
         <div class="proj-name-row">Forma</div>
         <p class="proj-desc">A luxury furniture e-commerce experience — full design system, 5 pages, slide-out cart, 0 WCAG AA failures, and a 9.1/10 design audit score.</p>
         <div class="proj-tags">
@@ -1257,6 +1276,665 @@ function loadIframe(id){
 
 </script>
 
+<!-- Scoped CSS for the embedded animation showcase -->
+    <style>
+      /* ── MOTION STUDY SCOPED STYLES ── */
+      .ms-wrap{background:var(--cream);color:var(--black);font-family:'Barlow',sans-serif;overflow-x:hidden}
+      .ms-wrap *,.ms-wrap *::before,.ms-wrap *::after{box-sizing:border-box}
+
+      /* Hero */
+      .ms-hero{min-height:60vh;background:var(--black);display:flex;flex-direction:column;justify-content:flex-end;padding:80px 60px 70px;position:relative;overflow:hidden;border-bottom:2px solid var(--black)}
+      .ms-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(240,237,230,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(240,237,230,.04) 1px,transparent 1px);background-size:80px 80px;animation:msGridShift 20s linear infinite}
+      @keyframes msGridShift{to{background-position:80px 80px}}
+      .ms-hero-orb{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle at 40% 40%,var(--red),var(--red2) 60%,#7a1c12);top:-180px;right:-120px;animation:msOrbFloat 8s ease-in-out infinite}
+      @keyframes msOrbFloat{0%,100%{transform:translate(0,0)}50%{transform:translate(-20px,30px)}}
+      .ms-hero-tag{font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(240,237,230,.4);display:flex;align-items:center;gap:12px;margin-bottom:28px;position:relative;z-index:2;opacity:0;animation:msSR .7s .2s forwards}
+      .ms-hero-tag::before{content:'';width:30px;height:1px;background:rgba(240,237,230,.3)}
+      .ms-hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(4rem,10vw,9rem);line-height:.85;letter-spacing:-.01em;color:var(--cream);position:relative;z-index:2;margin-bottom:32px;opacity:0;animation:msSR .9s .4s forwards}
+      .ms-hero-title .ms-red{color:var(--red)}
+      .ms-hero-title .ms-outline{-webkit-text-stroke:2px rgba(240,237,230,.3);color:transparent}
+      .ms-hero-bottom{display:flex;align-items:flex-end;justify-content:space-between;position:relative;z-index:2;opacity:0;animation:msSR .7s .6s forwards;gap:32px;flex-wrap:wrap}
+      .ms-hero-desc{font-size:1rem;line-height:1.7;color:rgba(240,237,230,.6);max-width:460px}
+      .ms-hero-desc strong{color:var(--cream)}
+      .ms-hero-stats{display:flex;gap:40px;flex-shrink:0}
+      .ms-stat-n{font-family:'Bebas Neue',sans-serif;font-size:2.6rem;color:var(--red);line-height:1}
+      .ms-stat-l{font-family:'Space Mono',monospace;font-size:.44rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(240,237,230,.35);margin-top:4px}
+      .ms-ticker-bar{position:absolute;bottom:0;left:0;right:0;height:40px;background:var(--red);display:flex;align-items:center;padding:0 60px;overflow:hidden}
+      .ms-ticker{display:flex;gap:48px;animation:msTicker 12s linear infinite;white-space:nowrap}
+      .ms-ticker span{font-family:'Bebas Neue',sans-serif;font-size:.82rem;letter-spacing:.15em;color:var(--cream);opacity:.8}
+      .ms-ticker .ms-sep{opacity:.4}
+      @keyframes msTicker{to{transform:translateX(-50%)}}
+      @keyframes msSR{from{opacity:0;transform:translateX(-24px)}to{opacity:1;transform:translateX(0)}}
+
+      /* Section scaffold */
+      .ms-section{border-bottom:2px solid var(--black)}
+      .ms-section-header{padding:72px 60px 52px;border-bottom:2px solid var(--black);display:flex;justify-content:space-between;align-items:flex-end;gap:40px}
+      .ms-sec-label{font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.35em;text-transform:uppercase;color:var(--red);margin-bottom:16px;display:flex;align-items:center;gap:12px}
+      .ms-sec-label::before{content:'';width:24px;height:2px;background:var(--red)}
+      .ms-sec-h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,5rem);line-height:.88;letter-spacing:.02em;color:var(--black)}
+      .ms-sec-note{font-family:'Space Mono',monospace;font-size:.52rem;letter-spacing:.15em;text-transform:uppercase;color:var(--light);max-width:240px;text-align:right;line-height:1.8}
+      .ms-reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+      .ms-reveal.ms-visible{opacity:1;transform:translateY(0)}
+      .ms-reveal.ms-d1{transition-delay:.1s}
+      .ms-reveal.ms-d2{transition-delay:.2s}
+      .ms-reveal.ms-d3{transition-delay:.3s}
+
+      /* 01 Micro */
+      .ms-micro-grid{display:grid;grid-template-columns:repeat(3,1fr);background:var(--black);gap:2px}
+      .ms-micro-cell{background:var(--cream);padding:48px 40px}
+      .ms-micro-cell-label{font-family:'Space Mono',monospace;font-size:.46rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gray);margin-bottom:28px}
+      .ms-micro-title{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:.03em;color:var(--black);margin-bottom:10px}
+      .ms-micro-desc{font-size:.88rem;line-height:1.7;color:var(--gray);margin-bottom:32px}
+      .ms-demo-area{display:flex;justify-content:center;align-items:center;min-height:110px}
+      .ms-btn-auto{position:relative;overflow:hidden;padding:14px 32px;background:var(--black);color:var(--cream);font-family:'Barlow Condensed',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;border:none;display:inline-block}
+      .ms-btn-auto .ms-fill{position:absolute;inset:0;background:var(--red);transform:translateX(-101%);animation:msBtnWipe 3s ease-in-out infinite}
+      @keyframes msBtnWipe{0%,100%{transform:translateX(-101%)}30%,70%{transform:translateX(0)}}
+      .ms-btn-auto span{position:relative;z-index:1}
+      .ms-check-demo{display:flex;flex-direction:column;gap:14px}
+      .ms-check-item{display:flex;align-items:center;gap:14px}
+      .ms-check-box{width:20px;height:20px;border:2px solid var(--black);position:relative;flex-shrink:0;transition:background .3s,border-color .3s}
+      .ms-check-box::after{content:'';position:absolute;top:2px;left:6px;width:5px;height:9px;border-right:2px solid var(--cream);border-bottom:2px solid var(--cream);transform:rotate(45deg) scale(0);transform-origin:bottom right;transition:transform .25s cubic-bezier(.34,1.56,.64,1)}
+      .ms-check-item.ms-checked .ms-check-box{background:var(--black);border-color:var(--black)}
+      .ms-check-item.ms-checked .ms-check-box::after{transform:rotate(45deg) scale(1)}
+      .ms-check-label{font-family:'Barlow Condensed',sans-serif;font-size:.88rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--black);transition:color .3s}
+      .ms-check-item.ms-checked .ms-check-label{color:var(--light);text-decoration:line-through}
+      .ms-toggle-demo{display:flex;flex-direction:column;gap:18px;width:100%}
+      .ms-toggle-row{display:flex;align-items:center;justify-content:space-between}
+      .ms-toggle-lbl{font-family:'Barlow Condensed',sans-serif;font-size:.84rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gray)}
+      .ms-toggle{width:50px;height:26px;background:var(--light);border-radius:13px;position:relative;transition:background .4s;flex-shrink:0}
+      .ms-toggle.ms-on{background:var(--black)}
+      .ms-toggle-thumb{position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:var(--cream);transition:transform .4s cubic-bezier(.34,1.56,.64,1),background .4s;box-shadow:0 1px 4px rgba(0,0,0,.2)}
+      .ms-toggle.ms-on .ms-toggle-thumb{transform:translateX(24px);background:var(--red)}
+      .ms-float-group{position:relative;width:100%;margin-bottom:14px}
+      .ms-float-group:last-child{margin-bottom:0}
+      .ms-float-display{width:100%;padding:18px 14px 6px;border:2px solid var(--light);background:transparent;font-family:'Barlow',sans-serif;font-size:1rem;color:var(--black);transition:border-color .3s;min-height:44px}
+      .ms-float-lbl{position:absolute;top:13px;left:14px;font-family:'Space Mono',monospace;font-size:.52rem;letter-spacing:.2em;text-transform:uppercase;color:var(--light);transition:top .3s,font-size .3s,color .3s;pointer-events:none}
+      .ms-float-bar{position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--black);transition:width .3s ease}
+      .ms-float-group.ms-active .ms-float-lbl{top:5px;font-size:.38rem;color:var(--red)}
+      .ms-float-group.ms-active .ms-float-display{border-color:var(--black)}
+      .ms-float-group.ms-active .ms-float-bar{width:100%}
+      .ms-counter-demo{text-align:center}
+      .ms-counter-num{font-family:'Bebas Neue',sans-serif;font-size:4.5rem;line-height:1;color:var(--black)}
+      .ms-counter-num.ms-bump{animation:msBump .2s ease}
+      @keyframes msBump{0%{transform:scale(1.2)}100%{transform:scale(1)}}
+      .ms-counter-lbl{font-family:'Space Mono',monospace;font-size:.48rem;letter-spacing:.2em;text-transform:uppercase;color:var(--light);margin-top:8px}
+      .ms-counter-track{display:flex;justify-content:center;gap:6px;margin-top:10px}
+      .ms-counter-pip{width:6px;height:6px;border-radius:50%;background:var(--light);transition:background .3s}
+      .ms-counter-pip.ms-active{background:var(--red)}
+      .ms-progress-demo{width:100%;display:flex;flex-direction:column;gap:14px}
+      .ms-prog-row{display:flex;flex-direction:column;gap:5px}
+      .ms-prog-head{display:flex;justify-content:space-between}
+      .ms-prog-name{font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--black)}
+      .ms-prog-val{font-family:'Space Mono',monospace;font-size:.48rem;letter-spacing:.15em;color:var(--gray)}
+      .ms-prog-track{height:3px;background:var(--cream2);overflow:hidden}
+      .ms-prog-fill{height:100%;background:var(--black);width:0;transition:width 1.4s cubic-bezier(.4,0,.2,1)}
+      .ms-prog-fill.ms-red{background:var(--red)}
+
+      /* 02 Scroll */
+      .ms-parallax-strip{display:grid;grid-template-columns:1fr 1fr 1fr;background:var(--black);gap:2px;height:340px;overflow:hidden}
+      .ms-para-card{position:relative;overflow:hidden}
+      .ms-para-card-inner{position:absolute;top:-50px;bottom:-50px;left:0;right:0;display:flex;flex-direction:column;justify-content:center;padding:50px 36px;will-change:transform}
+      .ms-para-card:nth-child(1) .ms-para-card-inner{background:var(--cream);animation:msPF1 6s ease-in-out infinite}
+      .ms-para-card:nth-child(2) .ms-para-card-inner{background:var(--black);animation:msPF2 6s ease-in-out infinite}
+      .ms-para-card:nth-child(3) .ms-para-card-inner{background:var(--red);animation:msPF3 6s ease-in-out infinite}
+      @keyframes msPF1{0%,100%{transform:translateY(-12px)}50%{transform:translateY(12px)}}
+      @keyframes msPF2{0%,100%{transform:translateY(8px)}50%{transform:translateY(-8px)}}
+      @keyframes msPF3{0%,100%{transform:translateY(-20px)}50%{transform:translateY(16px)}}
+      .ms-para-num{font-family:'Bebas Neue',sans-serif;font-size:7rem;line-height:.85;opacity:.1;position:absolute;bottom:0;right:12px;pointer-events:none;z-index:3;color:var(--black)}
+      .ms-para-card:nth-child(2) .ms-para-num,.ms-para-card:nth-child(3) .ms-para-num{color:var(--cream)}
+      .ms-para-title{font-family:'Bebas Neue',sans-serif;font-size:1.7rem;letter-spacing:.04em;color:var(--black);margin-bottom:8px}
+      .ms-para-card:nth-child(2) .ms-para-title,.ms-para-card:nth-child(3) .ms-para-title{color:var(--cream)}
+      .ms-para-text{font-size:.88rem;line-height:1.7;color:var(--gray)}
+      .ms-para-card:nth-child(2) .ms-para-text{color:rgba(240,237,230,.5)}
+      .ms-para-card:nth-child(3) .ms-para-text{color:rgba(240,237,230,.7)}
+      .ms-stagger-list{display:grid;grid-template-columns:1fr 1fr;background:var(--black);gap:2px}
+      .ms-stagger-item{background:var(--cream);padding:40px;display:flex;align-items:center;gap:24px;animation:msStP 4s ease-in-out infinite}
+      .ms-stagger-item:nth-child(odd){border-right:2px solid var(--black)}
+      .ms-stagger-item:nth-child(2){animation-delay:.4s}
+      .ms-stagger-item:nth-child(3){animation-delay:.8s}
+      .ms-stagger-item:nth-child(4){animation-delay:1.2s}
+      @keyframes msStP{0%,100%{background:var(--cream)}50%{background:var(--cream2)}}
+      .ms-stagger-icon{width:50px;height:50px;flex-shrink:0;border:2px solid var(--black);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:var(--red)}
+      .ms-stagger-text h4{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:.03em;color:var(--black);margin-bottom:5px}
+      .ms-stagger-text p{font-size:.86rem;line-height:1.6;color:var(--gray)}
+      .ms-h-scroll-outer{overflow:hidden;background:var(--black);padding:40px 0}
+      .ms-h-scroll-track{display:flex;width:max-content;animation:msHAS 24s linear infinite}
+      @keyframes msHAS{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+      .ms-h-card{width:280px;flex-shrink:0;background:var(--cream);padding:36px 28px;border-right:2px solid var(--black);position:relative;overflow:hidden;transition:background .4s}
+      .ms-h-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--red);transform:scaleX(0);transform-origin:left;animation:msHCB 4.8s ease-in-out infinite}
+      .ms-h-card:nth-child(2)::before,.ms-h-card:nth-child(8)::before{animation-delay:.8s}
+      .ms-h-card:nth-child(3)::before,.ms-h-card:nth-child(9)::before{animation-delay:1.6s}
+      .ms-h-card:nth-child(4)::before,.ms-h-card:nth-child(10)::before{animation-delay:2.4s}
+      .ms-h-card:nth-child(5)::before,.ms-h-card:nth-child(11)::before{animation-delay:3.2s}
+      .ms-h-card:nth-child(6)::before,.ms-h-card:nth-child(12)::before{animation-delay:4s}
+      @keyframes msHCB{0%,100%{transform:scaleX(0);transform-origin:left}35%,65%{transform:scaleX(1);transform-origin:left}}
+      .ms-h-card.ms-active{background:var(--black)}
+      .ms-h-card.ms-active .ms-h-card-num{-webkit-text-stroke-color:rgba(217,58,43,.3)}
+      .ms-h-card.ms-active .ms-h-card-title,.ms-h-card.ms-active .ms-h-card-text{color:var(--cream)}
+      .ms-h-card.ms-active .ms-h-card-text{color:rgba(240,237,230,.55)}
+      .ms-h-card-num{font-family:'Bebas Neue',sans-serif;font-size:4.5rem;color:transparent;-webkit-text-stroke:1px rgba(17,16,16,.08);line-height:1;margin-bottom:10px;transition:-webkit-text-stroke-color .4s}
+      .ms-h-card-title{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:.03em;color:var(--black);margin-bottom:8px;transition:color .4s}
+      .ms-h-card-text{font-size:.86rem;line-height:1.6;color:var(--gray);transition:color .4s}
+
+      /* 03 Text */
+      .ms-text-demos{padding:72px 60px;display:flex;flex-direction:column;gap:72px}
+      .ms-tw-label{font-family:'Space Mono',monospace;font-size:.48rem;letter-spacing:.25em;text-transform:uppercase;color:var(--red);margin-bottom:18px}
+      .ms-tw-text{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,4.5rem);line-height:.9;letter-spacing:.02em;color:var(--black);min-height:1.2em}
+      .ms-tw-cursor{display:inline-block;width:3px;height:.85em;background:var(--red);vertical-align:middle;animation:msBlink .8s step-end infinite;margin-left:4px}
+      @keyframes msBlink{0%,100%{opacity:1}50%{opacity:0}}
+      .ms-tw-demo{border-bottom:2px solid var(--cream2);padding-bottom:56px}
+      .ms-scramble-demo{border-bottom:2px solid var(--cream2);padding-bottom:56px}
+      .ms-scramble-text{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,4.5rem);line-height:.9;color:var(--black);display:inline-block}
+      .ms-scramble-hint{font-family:'Space Mono',monospace;font-size:.46rem;letter-spacing:.2em;text-transform:uppercase;color:var(--light);margin-top:10px}
+      .ms-split-demo{border-bottom:2px solid var(--cream2);padding-bottom:56px}
+      .ms-split-wrapper{overflow:hidden;line-height:.95;margin-bottom:4px}
+      .ms-split-line{display:block;font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,4.5rem);letter-spacing:.02em;color:var(--black);transform:translateY(110%)}
+      .ms-split-line .ms-accent{color:var(--red)}
+      .ms-char-text{font-family:'Barlow Condensed',sans-serif;font-size:1.4rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--black)}
+      .ms-char-text .ms-ch{display:inline-block}
+
+      /* 04 States */
+      .ms-states-grid{display:grid;grid-template-columns:1fr 1fr;background:var(--black);gap:2px}
+      .ms-state-cell{background:var(--cream);padding:48px 40px}
+      .ms-state-cell:nth-child(odd){border-right:2px solid var(--black)}
+      .ms-skeleton-card{border:2px solid var(--light);padding:24px}
+      .ms-skel{background:linear-gradient(90deg,var(--cream2) 25%,var(--light) 50%,var(--cream2) 75%);background-size:400% 100%;animation:msShimmer 1.8s infinite;border-radius:1px}
+      @keyframes msShimmer{to{background-position:-400% 0}}
+      .ms-skel-avatar{width:44px;height:44px;margin-bottom:18px}
+      .ms-skel-line{height:9px;margin-bottom:9px}
+      .ms-skel-line.w90{width:90%}.ms-skel-line.w80{width:80%}.ms-skel-line.w60{width:60%}
+      .ms-skel-title{height:16px;width:70%;margin-bottom:12px}
+      .ms-spinners-row{display:flex;gap:28px;align-items:center;justify-content:center}
+      .ms-spin1{width:36px;height:36px;border:3px solid var(--cream2);border-top-color:var(--black);border-radius:50%;animation:msSpin 1s linear infinite}
+      .ms-spin2{width:36px;height:36px;border:3px solid transparent;border-top-color:var(--red);border-right-color:var(--red);border-radius:50%;animation:msSpin .8s linear infinite}
+      .ms-spin3{width:36px;height:36px;position:relative}
+      .ms-spin3::before,.ms-spin3::after{content:'';position:absolute;inset:0;border-radius:50%}
+      .ms-spin3::before{border:3px solid var(--black);opacity:.2}
+      .ms-spin3::after{border:3px solid transparent;border-top-color:var(--black);animation:msSpin .8s cubic-bezier(.5,0,.5,1) infinite}
+      @keyframes msSpin{to{transform:rotate(360deg)}}
+      .ms-dots-loader{display:flex;gap:8px;align-items:center}
+      .ms-dot-l{width:9px;height:9px;border-radius:50%;background:var(--black);animation:msDotB 1.2s ease-in-out infinite}
+      .ms-dot-l:nth-child(2){animation-delay:.2s;background:var(--gray)}
+      .ms-dot-l:nth-child(3){animation-delay:.4s;background:var(--red)}
+      @keyframes msDotB{0%,80%,100%{transform:scale(.8);opacity:.5}40%{transform:scale(1.2);opacity:1}}
+      .ms-state-btn{width:100%;padding:14px 24px;border:2px solid var(--black);font-family:'Barlow Condensed',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:10px;transition:background .5s,border-color .5s,color .5s}
+      .ms-state-btn-spinner{width:11px;height:11px;border-radius:50%;border:2px solid rgba(240,237,230,.4);border-top-color:var(--cream);animation:msSpin .7s linear infinite;display:none;flex-shrink:0}
+      .ms-tooltip-wrap{position:relative;display:inline-block}
+      .ms-tip-btn{padding:12px 24px;border:2px solid var(--black);font-family:'Barlow Condensed',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--black);background:none;display:block}
+      .ms-tooltip{position:absolute;bottom:calc(100% + 10px);left:50%;background:var(--black);color:var(--cream);font-family:'Space Mono',monospace;font-size:.48rem;letter-spacing:.15em;text-transform:uppercase;white-space:nowrap;padding:7px 12px;animation:msTTL 4s ease-in-out infinite}
+      .ms-tooltip::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:5px solid transparent;border-top-color:var(--black)}
+      @keyframes msTTL{0%,100%{opacity:0;transform:translateX(-50%) translateY(8px)}20%,80%{opacity:1;transform:translateX(-50%) translateY(0)}}
+
+      /* 05 Hero Effects */
+      .ms-effects-grid{display:grid;grid-template-columns:1fr 1fr;background:var(--black);gap:2px}
+      .ms-effects-cell{background:var(--cream);padding:56px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;position:relative}
+      .ms-effects-cell.ms-dark{background:var(--black)}
+      .ms-effects-cell.ms-muted{background:var(--cream2)}
+      .ms-effects-cell-label{font-family:'Space Mono',monospace;font-size:.46rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gray);width:100%;margin-bottom:6px}
+      .ms-effects-cell.ms-dark .ms-effects-cell-label{color:rgba(240,237,230,.35)}
+      .ms-effects-cell-title{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:.03em;color:var(--black);width:100%;margin-bottom:6px}
+      .ms-effects-cell.ms-dark .ms-effects-cell-title{color:var(--cream)}
+      .ms-effects-cell-desc{font-size:.86rem;line-height:1.6;color:var(--gray);width:100%}
+      .ms-effects-cell.ms-dark .ms-effects-cell-desc{color:rgba(240,237,230,.45)}
+      .ms-magnetic-btn{position:relative;display:inline-flex;align-items:center;gap:14px;padding:20px 44px;background:var(--cream);border:none;font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:.06em;color:var(--black);animation:msMagF 4s ease-in-out infinite;margin-top:6px}
+      @keyframes msMagF{0%,100%{transform:translate(0,0)}25%{transform:translate(10px,-8px)}50%{transform:translate(-8px,10px)}75%{transform:translate(12px,4px)}}
+      .ms-magnetic-fill{position:absolute;inset:0;background:var(--red);animation:msMagFill 4s ease-in-out infinite;z-index:0}
+      @keyframes msMagFill{0%,100%{transform:scaleX(0);transform-origin:left}30%,70%{transform:scaleX(1);transform-origin:left}}
+      .ms-magnetic-btn>span{position:relative;z-index:1}
+      .ms-morph-shape{width:90px;height:90px;background:var(--red);animation:msMorphS 6s ease-in-out infinite;margin-top:6px}
+      @keyframes msMorphS{0%,100%{border-radius:0;transform:rotate(0deg)}25%{border-radius:50%;transform:rotate(90deg) scale(1.1)}50%{border-radius:30% 70% 70% 30%/30% 30% 70% 70%;transform:rotate(180deg)}75%{border-radius:50% 0;transform:rotate(270deg) scale(.9)}}
+      .ms-clip-demo{position:relative;overflow:hidden;height:160px;width:100%;border:2px solid var(--black);margin-top:6px}
+      .ms-clip-base{position:absolute;inset:0;background:var(--black);display:flex;align-items:center;justify-content:center}
+      .ms-clip-base-text{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.4rem,3vw,2.8rem);color:rgba(240,237,230,.12);letter-spacing:.08em}
+      .ms-clip-reveal{position:absolute;inset:0;background:var(--red);display:flex;align-items:center;justify-content:center;animation:msClipL 5s ease-in-out infinite}
+      @keyframes msClipL{0%,100%{clip-path:circle(0% at 50% 50%)}40%,60%{clip-path:circle(75% at 50% 50%)}}
+      .ms-clip-reveal-text{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.4rem,3vw,2.8rem);color:var(--cream);letter-spacing:.08em}
+      .ms-clip-hint{position:absolute;bottom:10px;right:14px;font-family:'Space Mono',monospace;font-size:.4rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(240,237,230,.3)}
+      .ms-wipe-stage{display:flex;gap:2px;background:var(--black);position:relative;overflow:hidden;width:100%;margin-top:6px}
+      .ms-wipe-panel{flex:1;background:var(--cream);padding:24px 20px;border-right:2px solid var(--black);display:flex;flex-direction:column;gap:6px}
+      .ms-wipe-panel:last-child{border-right:none}
+      .ms-wipe-panel-title{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.03em;color:var(--black)}
+      .ms-wipe-panel-body{font-size:.78rem;line-height:1.5;color:var(--gray)}
+      .ms-wipe-curtain{position:absolute;inset:0;background:var(--black);transform:scaleX(0);transform-origin:left;animation:msWipeC 6s ease-in-out infinite;pointer-events:none}
+      @keyframes msWipeC{0%{transform:scaleX(0);transform-origin:left}35%{transform:scaleX(1);transform-origin:left;animation-timing-function:step-end}35.01%{transform:scaleX(1);transform-origin:right}70%{transform:scaleX(0);transform-origin:right}100%{transform:scaleX(0);transform-origin:left}}
+
+      /* 06 Particles */
+      .ms-canvas-wrapper{position:relative;height:420px;overflow:hidden;background:var(--black)}
+      .ms-canvas-wrapper canvas{position:absolute;inset:0}
+      .ms-canvas-overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none;z-index:2;gap:10px}
+      .ms-canvas-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,7vw,6rem);letter-spacing:.04em;color:var(--cream);opacity:.14;line-height:1}
+      .ms-canvas-sub{font-family:'Space Mono',monospace;font-size:.5rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(240,237,230,.25)}
+      .ms-canvas-purpose{display:flex;gap:40px;margin-top:10px}
+      .ms-canvas-stat{text-align:center}
+      .ms-canvas-stat-n{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--red);opacity:.65;line-height:1}
+      .ms-canvas-stat-l{font-family:'Space Mono',monospace;font-size:.4rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(240,237,230,.18);margin-top:4px}
+      .ms-canvas-arg{display:grid;grid-template-columns:1fr 1fr 1fr;background:var(--black);gap:2px;border-top:2px solid rgba(240,237,230,.08)}
+      .ms-canvas-arg-cell{padding:36px 44px;border-right:2px solid rgba(240,237,230,.08)}
+      .ms-canvas-arg-cell:last-child{border-right:none}
+      .ms-canvas-arg-num{font-family:'Space Mono',monospace;font-size:.46rem;letter-spacing:.25em;text-transform:uppercase;color:var(--red);opacity:.7;margin-bottom:14px}
+      .ms-canvas-arg-title{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:.03em;color:var(--cream);margin-bottom:8px}
+      .ms-canvas-arg-text{font-size:.86rem;line-height:1.7;color:rgba(240,237,230,.45)}
+
+      /* 07 3D */
+      .ms-perspective-grid{display:grid;grid-template-columns:1fr 1fr;background:var(--black);gap:2px}
+      .ms-persp-cell{background:var(--cream);padding:48px 40px;display:flex;flex-direction:column;align-items:flex-start}
+      .ms-persp-cell:first-child{border-right:2px solid var(--black)}
+      .ms-persp-cell.ms-muted{background:var(--cream2)}
+      .ms-persp-demo{width:100%;height:280px;display:flex;align-items:center;justify-content:flex-start;margin:28px 0 24px}
+      .ms-card-3d{width:180px;height:250px;perspective:1000px;flex-shrink:0}
+      .ms-card-3d-inner{width:100%;height:100%;position:relative;transform-style:preserve-3d;animation:msCFL 6s cubic-bezier(.4,0,.6,1) infinite}
+      @keyframes msCFL{0%{transform:rotateY(0deg)}8%{transform:rotateY(0deg)}42%{transform:rotateY(180deg)}58%{transform:rotateY(180deg)}92%{transform:rotateY(0deg)}100%{transform:rotateY(0deg)}}
+      .ms-card-front,.ms-card-back{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:20px}
+      .ms-card-front{background:var(--black)}
+      .ms-card-back{background:var(--red);transform:rotateY(180deg)}
+      .ms-card-front-title,.ms-card-back-title{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:.03em;color:var(--cream)}
+      .ms-card-front-text,.ms-card-back-text{font-size:.8rem;line-height:1.6;color:rgba(240,237,230,.6);margin-top:5px}
+      .ms-card-front-num{font-family:'Bebas Neue',sans-serif;font-size:4rem;color:rgba(240,237,230,.06);position:absolute;top:8px;right:12px}
+      .ms-tilt-card{width:260px;height:180px;background:var(--black);padding:28px;position:relative;overflow:hidden;animation:msTiltSweep 6s ease-in-out infinite;flex-shrink:0}
+      @keyframes msTiltSweep{0%,100%{transform:perspective(600px) rotateY(0deg) rotateX(0deg)}25%{transform:perspective(600px) rotateY(12deg) rotateX(-6deg)}50%{transform:perspective(600px) rotateY(-10deg) rotateX(5deg)}75%{transform:perspective(600px) rotateY(8deg) rotateX(6deg)}}
+      .ms-tilt-shine{position:absolute;inset:0;animation:msTiltShine 6s ease-in-out infinite;pointer-events:none}
+      @keyframes msTiltShine{0%,100%{background:radial-gradient(circle at 50% 50%,rgba(240,237,230,.06) 0%,transparent 60%)}25%{background:radial-gradient(circle at 75% 25%,rgba(240,237,230,.13) 0%,transparent 60%)}50%{background:radial-gradient(circle at 25% 75%,rgba(240,237,230,.1) 0%,transparent 60%)}75%{background:radial-gradient(circle at 80% 60%,rgba(240,237,230,.13) 0%,transparent 60%)}}
+      .ms-tilt-card-title{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:.04em;color:var(--cream);position:relative;z-index:1;margin-bottom:6px}
+      .ms-tilt-card-text{font-size:.8rem;line-height:1.6;color:rgba(240,237,230,.5);position:relative;z-index:1}
+      .ms-persp-rationale{font-size:.88rem;line-height:1.7;color:var(--gray);width:100%}
+
+      /* Reflection */
+      .ms-case-strip{background:var(--black);padding:72px 60px;display:flex;flex-direction:column;gap:44px}
+      .ms-case-strip-label{font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.35em;text-transform:uppercase;color:var(--red);display:flex;align-items:center;gap:12px}
+      .ms-case-strip-label::before{content:'';width:24px;height:2px;background:var(--red)}
+      .ms-case-strip h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,6vw,5.5rem);line-height:.88;letter-spacing:.02em;color:var(--cream);max-width:700px}
+      .ms-case-strip h2 .ms-outline{-webkit-text-stroke:1px rgba(240,237,230,.3);color:transparent}
+      .ms-insights{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(240,237,230,.08)}
+      .ms-insight{background:var(--black);padding:36px;border-right:2px solid rgba(240,237,230,.08)}
+      .ms-insight:last-child{border-right:none}
+      .ms-insight-n{font-family:'Bebas Neue',sans-serif;font-size:3.2rem;color:var(--red);line-height:1;margin-bottom:5px}
+      .ms-insight-l{font-family:'Space Mono',monospace;font-size:.46rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(240,237,230,.3)}
+      .ms-insight-txt{font-size:.88rem;line-height:1.7;color:rgba(240,237,230,.5);margin-top:10px}
+
+      /* Responsive */
+      @media(max-width:860px){
+        .ms-micro-grid,.ms-states-grid,.ms-effects-grid,.ms-perspective-grid{grid-template-columns:1fr}
+        .ms-parallax-strip{grid-template-columns:1fr;height:auto}
+        .ms-para-card{height:200px}
+        .ms-stagger-list{grid-template-columns:1fr}
+        .ms-stagger-item:nth-child(odd){border-right:none;border-bottom:2px solid var(--black)}
+        .ms-canvas-arg{grid-template-columns:1fr}
+        .ms-canvas-arg-cell{border-right:none;border-bottom:2px solid rgba(240,237,230,.08)}
+        .ms-insights{grid-template-columns:1fr}
+        .ms-insight{border-right:none;border-bottom:2px solid rgba(240,237,230,.08)}
+        .ms-text-demos,.ms-case-strip{padding:48px 24px}
+        .ms-section-header{flex-direction:column;padding:48px 24px 36px}
+        .ms-section-header .ms-sec-note{display:none}
+        .ms-hero{padding:60px 24px 60px}
+        .ms-hero-bottom{flex-direction:column;gap:24px}
+      }
+    </style>
+
+<!-- ═══════════════════════════════════════════
+     CASE STUDY OVERLAY — MOTION STUDY
+═══════════════════════════════════════════ -->
+<div class="cs-overlay" id="cs-motion" role="dialog" aria-modal="true" aria-label="Motion Study Case Study">
+  <div class="cs-drawer">
+    <div class="cs-close">
+      <span class="cs-close-label">Case Study 01 — Motion Study</span>
+      <button class="cs-close-btn" onclick="closeCS('motion')">Close ✕</button>
+    </div>
+
+
+
+    <!-- ── EMBEDDED MOTION STUDY CONTENT ── -->
+    <div class="ms-wrap">
+
+      <!-- HERO -->
+      <div class="ms-hero">
+        <div class="ms-hero-grid"></div>
+        <div class="ms-hero-orb"></div>
+        <div class="ms-hero-tag"><span>Motion Study — 2025</span></div>
+        <div class="ms-hero-title">WHEN<br><span class="ms-outline">DESIGN</span><br><span class="ms-red">MOVES</span></div>
+        <div class="ms-hero-bottom">
+          <p class="ms-hero-desc">A case study in <strong>purposeful motion</strong> — from micro-interactions that build trust to dramatic effects that leave an impression. Every animation earns its place.</p>
+          <div class="ms-hero-stats">
+            <div><div class="ms-stat-n">0</div><div class="ms-stat-l">Libraries</div></div>
+            <div><div class="ms-stat-n">7</div><div class="ms-stat-l">Categories</div></div>
+            <div><div class="ms-stat-n">1</div><div class="ms-stat-l">File</div></div>
+          </div>
+        </div>
+        <div class="ms-ticker-bar">
+          <div class="ms-ticker">
+            <span>Micro Interactions</span><span class="ms-sep">·</span><span>Scroll Effects</span><span class="ms-sep">·</span><span>Text Animations</span><span class="ms-sep">·</span><span>State Transitions</span><span class="ms-sep">·</span><span>Hero Effects</span><span class="ms-sep">·</span><span>Particles</span><span class="ms-sep">·</span><span>3D Transforms</span><span class="ms-sep">·</span>
+            <span>Micro Interactions</span><span class="ms-sep">·</span><span>Scroll Effects</span><span class="ms-sep">·</span><span>Text Animations</span><span class="ms-sep">·</span><span>State Transitions</span><span class="ms-sep">·</span><span>Hero Effects</span><span class="ms-sep">·</span><span>Particles</span><span class="ms-sep">·</span><span>3D Transforms</span><span class="ms-sep">·</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 01 MICRO ANIMATIONS -->
+      <div class="ms-section" id="ms-s01">
+        <div class="ms-section-header ms-reveal">
+          <div><div class="ms-sec-label">01</div><h2 class="ms-sec-h2">MICRO<br>ANIMATIONS</h2></div>
+          <p class="ms-sec-note">The animations users feel, not see. Small moments that build trust.</p>
+        </div>
+        <div class="ms-micro-grid">
+          <div class="ms-micro-cell ms-reveal">
+            <div class="ms-micro-cell-label">01.01 — Button Fill</div>
+            <div class="ms-micro-title">Directional Wipe</div>
+            <p class="ms-micro-desc">The fill travels left-to-right — in the same direction as reading. That match between motion direction and intent is what makes it feel intuitive rather than decorative.</p>
+            <div class="ms-demo-area"><div class="ms-btn-auto"><div class="ms-fill"></div><span>Get Started</span></div></div>
+          </div>
+          <div class="ms-micro-cell ms-reveal ms-d1">
+            <div class="ms-micro-cell-label">01.02 — Checkbox</div>
+            <div class="ms-micro-title">Spring Check</div>
+            <p class="ms-micro-desc">cubic-bezier(.34,1.56,.64,1) gives the checkmark a slight overshoot before settling. That 3% overshoot is the difference between a digital tick and something that feels physically pressed.</p>
+            <div class="ms-demo-area">
+              <div class="ms-check-demo" id="ms-checkDemo">
+                <div class="ms-check-item ms-checked"><div class="ms-check-box"></div><span class="ms-check-label">Figma Prototype</span></div>
+                <div class="ms-check-item"><div class="ms-check-box"></div><span class="ms-check-label">Accessibility Audit</span></div>
+                <div class="ms-check-item ms-checked"><div class="ms-check-box"></div><span class="ms-check-label">Motion Design</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="ms-micro-cell ms-reveal ms-d2">
+            <div class="ms-micro-cell-label">01.03 — Toggle</div>
+            <div class="ms-micro-title">Thumb Spring</div>
+            <p class="ms-micro-desc">The same spring curve on the thumb. At 400ms it's fast enough to feel snappy, slow enough to read as intentional. Without the overshoot it feels like a checkbox — the spring is what makes it feel like a switch.</p>
+            <div class="ms-demo-area" style="width:100%">
+              <div class="ms-toggle-demo">
+                <div class="ms-toggle-row"><span class="ms-toggle-lbl">Dark Mode</span><div class="ms-toggle ms-on" id="ms-tog0"><div class="ms-toggle-thumb"></div></div></div>
+                <div class="ms-toggle-row"><span class="ms-toggle-lbl">Notifications</span><div class="ms-toggle" id="ms-tog1"><div class="ms-toggle-thumb"></div></div></div>
+                <div class="ms-toggle-row"><span class="ms-toggle-lbl">Animations</span><div class="ms-toggle ms-on" id="ms-tog2"><div class="ms-toggle-thumb"></div></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="ms-micro-cell ms-reveal">
+            <div class="ms-micro-cell-label">01.04 — Input</div>
+            <div class="ms-micro-title">Float Label</div>
+            <p class="ms-micro-desc">The label lives inside the field at rest and floats up on focus — saving 24px of vertical space per field without losing context. The red underline confirms the active state without adding a border change that could imply an error.</p>
+            <div class="ms-demo-area" style="flex-direction:column;width:100%">
+              <div class="ms-float-group" id="ms-fg1"><div class="ms-float-display" id="ms-fi1"></div><span class="ms-float-lbl">Full Name</span><div class="ms-float-bar"></div></div>
+              <div class="ms-float-group" id="ms-fg2"><div class="ms-float-display" id="ms-fi2"></div><span class="ms-float-lbl">Email Address</span><div class="ms-float-bar"></div></div>
+            </div>
+          </div>
+          <div class="ms-micro-cell ms-reveal ms-d1">
+            <div class="ms-micro-cell-label">01.05 — Counter</div>
+            <div class="ms-micro-title">Number Spring</div>
+            <p class="ms-micro-desc">A 200ms scale-up on each increment gives the number physical weight. The digit feels struck, not switched. Counting upward implies progress; the pip track shows where you are in the sequence.</p>
+            <div class="ms-demo-area">
+              <div class="ms-counter-demo">
+                <div class="ms-counter-num" id="ms-counterNum">00</div>
+                <div class="ms-counter-lbl">Animation count</div>
+                <div class="ms-counter-track" id="ms-counterTrack"></div>
+              </div>
+            </div>
+          </div>
+          <div class="ms-micro-cell ms-reveal ms-d2">
+            <div class="ms-micro-cell-label">01.06 — Progress</div>
+            <div class="ms-micro-title">Eased Fill</div>
+            <p class="ms-micro-desc">cubic-bezier(.4,0,.2,1) — fast start, slow settle. The ease-out landing is crucial: a linear fill feels mechanical. The settle implies arrival, not interruption.</p>
+            <div class="ms-demo-area" style="width:100%;align-items:flex-start;flex-direction:column">
+              <div class="ms-progress-demo">
+                <div class="ms-prog-row"><div class="ms-prog-head"><span class="ms-prog-name">UX Research</span><span class="ms-prog-val" id="ms-pv1">0%</span></div><div class="ms-prog-track"><div class="ms-prog-fill" id="ms-pf1"></div></div></div>
+                <div class="ms-prog-row"><div class="ms-prog-head"><span class="ms-prog-name">Visual Design</span><span class="ms-prog-val" id="ms-pv2">0%</span></div><div class="ms-prog-track"><div class="ms-prog-fill ms-red" id="ms-pf2"></div></div></div>
+                <div class="ms-prog-row"><div class="ms-prog-head"><span class="ms-prog-name">Frontend Dev</span><span class="ms-prog-val" id="ms-pv3">0%</span></div><div class="ms-prog-track"><div class="ms-prog-fill" id="ms-pf3"></div></div></div>
+                <div class="ms-prog-row"><div class="ms-prog-head"><span class="ms-prog-name">Motion Design</span><span class="ms-prog-val" id="ms-pv4">0%</span></div><div class="ms-prog-track"><div class="ms-prog-fill ms-red" id="ms-pf4"></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 02 SCROLL EFFECTS -->
+      <div class="ms-section" id="ms-s02">
+        <div class="ms-section-header ms-reveal">
+          <div><div class="ms-sec-label">02</div><h2 class="ms-sec-h2">SCROLL<br>EFFECTS</h2></div>
+          <p class="ms-sec-note">Scroll is a gesture. Responding to it makes the interface feel alive.</p>
+        </div>
+        <div class="ms-parallax-strip">
+          <div class="ms-para-card"><div class="ms-para-card-inner"><div class="ms-para-title">Context</div><p class="ms-para-text">Parallax layers move at different rates, creating depth without 3D transforms.</p></div><div class="ms-para-num">01</div></div>
+          <div class="ms-para-card"><div class="ms-para-card-inner"><div class="ms-para-title">Contrast</div><p class="ms-para-text">The dark card moves slower — it feels heavier, more anchored in space.</p></div><div class="ms-para-num">02</div></div>
+          <div class="ms-para-card"><div class="ms-para-card-inner"><div class="ms-para-title">Depth</div><p class="ms-para-text">Different speeds trick the eye into perceiving a physical z-axis.</p></div><div class="ms-para-num">03</div></div>
+        </div>
+        <div class="ms-stagger-list">
+          <div class="ms-stagger-item"><div class="ms-stagger-icon">→</div><div class="ms-stagger-text"><h4>Stagger Reveal</h4><p>Items enter with a delay cascade — the eye follows a natural reading flow.</p></div></div>
+          <div class="ms-stagger-item"><div class="ms-stagger-icon">←</div><div class="ms-stagger-text"><h4>Direction Intent</h4><p>Alternating directions reinforce the two-column grid structure. Motion echoes the layout.</p></div></div>
+          <div class="ms-stagger-item"><div class="ms-stagger-icon">↗</div><div class="ms-stagger-text"><h4>Timing Cascade</h4><p>50ms between each item is the sweet spot — fast enough as one event, slow enough to sequence.</p></div></div>
+          <div class="ms-stagger-item"><div class="ms-stagger-icon">↙</div><div class="ms-stagger-text"><h4>Reduced Motion</h4><p>Every scroll animation checks prefers-reduced-motion. Accessibility is a design input, not a QA step.</p></div></div>
+        </div>
+        <div style="padding:52px 60px 0;border-top:2px solid var(--black)">
+          <div class="ms-sec-label ms-reveal" style="margin-bottom:18px">02.03 — Auto Horizontal Scroll</div>
+          <p class="ms-reveal" style="font-size:.92rem;line-height:1.7;color:var(--gray);margin-bottom:36px;max-width:520px">Horizontal scroll reframes content as a browsable catalogue. The spatial metaphor changes the user's relationship — exploration instead of reading.</p>
+        </div>
+        <div class="ms-h-scroll-outer">
+          <div class="ms-h-scroll-track" id="ms-hTrack">
+            <div class="ms-h-card"><div class="ms-h-card-num">01</div><div class="ms-h-card-title">Entrance</div><p class="ms-h-card-text">How elements arrive sets the tone. A slide-in implies direction; a fade implies emergence.</p></div>
+            <div class="ms-h-card"><div class="ms-h-card-num">02</div><div class="ms-h-card-title">Feedback</div><p class="ms-h-card-text">Every action deserves a response. Without feedback, users repeat actions or lose confidence.</p></div>
+            <div class="ms-h-card"><div class="ms-h-card-num">03</div><div class="ms-h-card-title">Transition</div><p class="ms-h-card-text">Moving between states is a design opportunity. The journey matters as much as the destination.</p></div>
+            <div class="ms-h-card"><div class="ms-h-card-num">04</div><div class="ms-h-card-title">Attention</div><p class="ms-h-card-text">Motion draws the eye. Used deliberately, it guides. Used carelessly, it becomes noise.</p></div>
+            <div class="ms-h-card"><div class="ms-h-card-num">05</div><div class="ms-h-card-title">Delight</div><p class="ms-h-card-text">An unexpected overshoot or bounce builds emotional connection without adding complexity.</p></div>
+            <div class="ms-h-card"><div class="ms-h-card-num">06</div><div class="ms-h-card-title">Narrative</div><p class="ms-h-card-text">Sequencing animation in time turns static content into a story with a beginning and end.</p></div>
+            <div class="ms-h-card"><div class="ms-h-card-num">01</div><div class="ms-h-card-title">Entrance</div><p class="ms-h-card-text">How elements arrive sets the tone. A slide-in implies direction; a fade implies emergence.</p></div>
+            <div class="ms-h-card"><div class="ms-h-card-num">02</div><div class="ms-h-card-title">Feedback</div><p class="ms-h-card-text">Every action deserves a response. Without feedback, users repeat actions or lose confidence.</p></div>
+            <div class="ms-h-card"><div class="ms-h-card-num">03</div><div class="ms-h-card-title">Transition</div><p class="ms-h-card-text">Moving between states is a design opportunity. The journey matters as much as the destination.</p></div>
+            <div class="ms-h-card"><div class="ms-h-card-num">04</div><div class="ms-h-card-title">Attention</div><p class="ms-h-card-text">Motion draws the eye. Used deliberately, it guides. Used carelessly, it becomes noise.</p></div>
+            <div class="ms-h-card"><div class="ms-h-card-num">05</div><div class="ms-h-card-title">Delight</div><p class="ms-h-card-text">An unexpected overshoot or bounce builds emotional connection without adding complexity.</p></div>
+            <div class="ms-h-card"><div class="ms-h-card-num">06</div><div class="ms-h-card-title">Narrative</div><p class="ms-h-card-text">Sequencing animation in time turns static content into a story with a beginning and end.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03 TEXT EFFECTS -->
+      <div class="ms-section" id="ms-s03">
+        <div class="ms-section-header ms-reveal">
+          <div><div class="ms-sec-label">03</div><h2 class="ms-sec-h2">TEXT<br>EFFECTS</h2></div>
+          <p class="ms-sec-note">Typography in motion. The words say one thing; the way they arrive says another.</p>
+        </div>
+        <div class="ms-text-demos">
+          <div class="ms-tw-demo ms-reveal">
+            <div class="ms-tw-label">03.01 — Typewriter</div>
+            <div class="ms-tw-text"><span id="ms-twContent"></span><span class="ms-tw-cursor"></span></div>
+          </div>
+          <div class="ms-scramble-demo ms-reveal">
+            <div class="ms-tw-label">03.02 — Text Scramble</div>
+            <div class="ms-scramble-text" id="ms-scrambleText">MOTION IS A DESIGN TOOL</div>
+            <div class="ms-scramble-hint">Characters randomize before resolving — the chaos makes the arrival feel earned</div>
+          </div>
+          <div class="ms-split-demo ms-reveal">
+            <div class="ms-tw-label" style="margin-bottom:22px">03.03 — Line Reveal</div>
+            <div class="ms-split-wrapper"><span class="ms-split-line" id="ms-sl1">DESIGN IS</span></div>
+            <div class="ms-split-wrapper"><span class="ms-split-line" id="ms-sl2"><span class="ms-accent">NOT HOW</span></span></div>
+            <div class="ms-split-wrapper"><span class="ms-split-line" id="ms-sl3">IT LOOKS.</span></div>
+            <div class="ms-split-wrapper"><span class="ms-split-line" id="ms-sl4">IT'S HOW IT <span class="ms-accent">MOVES.</span></span></div>
+          </div>
+          <div class="ms-reveal">
+            <div class="ms-tw-label" style="margin-bottom:18px">03.04 — Character Cascade</div>
+            <div class="ms-char-text" id="ms-charText"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 04 STATE TRANSITIONS -->
+      <div class="ms-section" id="ms-s04">
+        <div class="ms-section-header ms-reveal">
+          <div><div class="ms-sec-label">04</div><h2 class="ms-sec-h2">STATE<br>TRANSITIONS</h2></div>
+          <p class="ms-sec-note">Loading isn't waiting. It's a conversation between the interface and the user.</p>
+        </div>
+        <div class="ms-states-grid">
+          <div class="ms-state-cell ms-reveal">
+            <div class="ms-micro-cell-label" style="margin-bottom:28px">04.01 — Skeleton Screen</div>
+            <div class="ms-micro-title" style="margin-bottom:10px">Content Placeholder</div>
+            <p class="ms-micro-desc">Skeletons set layout expectations before content arrives. The user's eye adjusts to the structure, so when content loads it drops into a familiar shape rather than causing a layout shift.</p>
+            <div class="ms-skeleton-card">
+              <div class="ms-skel ms-skel-avatar"></div>
+              <div class="ms-skel ms-skel-title"></div>
+              <div class="ms-skel ms-skel-line w90"></div>
+              <div class="ms-skel ms-skel-line w80"></div>
+              <div class="ms-skel ms-skel-line w60"></div>
+            </div>
+          </div>
+          <div class="ms-state-cell ms-reveal ms-d1">
+            <div class="ms-micro-cell-label" style="margin-bottom:28px">04.02 — Spinners</div>
+            <div class="ms-micro-title" style="margin-bottom:10px">Loading Indicators</div>
+            <p class="ms-micro-desc">Three variants: standard border spin, dual-arc, and elastic cubic-bezier. The elastic timing makes it feel like it has mass — it accelerates and decelerates rather than spinning at constant speed.</p>
+            <div class="ms-demo-area" style="min-height:80px">
+              <div class="ms-spinners-row">
+                <div class="ms-spin1"></div>
+                <div class="ms-spin2"></div>
+                <div class="ms-spin3"></div>
+                <div class="ms-dots-loader"><div class="ms-dot-l"></div><div class="ms-dot-l"></div><div class="ms-dot-l"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="ms-state-cell ms-reveal">
+            <div class="ms-micro-cell-label" style="margin-bottom:28px">04.03 — Button States</div>
+            <div class="ms-micro-title" style="margin-bottom:10px">Status Communication</div>
+            <p class="ms-micro-desc">Idle → loading → success → error. Each state change communicates progress without requiring the user to read a message. The colour shift alone carries the meaning.</p>
+            <div style="display:flex;flex-direction:column;gap:12px;margin-top:8px">
+              <div class="ms-state-btn" id="ms-stateBtn" style="background:var(--black);color:var(--cream)">
+                <div class="ms-state-btn-spinner" id="ms-stateBtnSpinner"></div>
+                <span id="ms-stateBtnTxt">Submit Form</span>
+              </div>
+              <div style="font-family:'Space Mono',monospace;font-size:.42rem;letter-spacing:.15em;text-transform:uppercase;color:var(--light);text-align:center">auto-cycling through states</div>
+            </div>
+          </div>
+          <div class="ms-state-cell ms-reveal ms-d1">
+            <div class="ms-micro-cell-label" style="margin-bottom:28px">04.04 — Tooltip</div>
+            <div class="ms-micro-title" style="margin-bottom:10px">Spring Reveal</div>
+            <p class="ms-micro-desc">The tooltip overshoots 6px above its target before settling. A fade-in tooltip is invisible — this one is felt. The spring curve makes it feel snapped into place.</p>
+            <div class="ms-demo-area">
+              <div class="ms-tooltip-wrap">
+                <div class="ms-tip-btn">Copy Link</div>
+                <div class="ms-tooltip">Copied to clipboard!</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 05 HERO EFFECTS -->
+      <div class="ms-section" id="ms-s05">
+        <div class="ms-section-header ms-reveal">
+          <div><div class="ms-sec-label">05</div><h2 class="ms-sec-h2">HERO<br>EFFECTS</h2></div>
+          <p class="ms-sec-note">First impressions are set in the first 3 seconds. These are the tools.</p>
+        </div>
+        <div class="ms-effects-grid">
+          <div class="ms-effects-cell ms-dark">
+            <div class="ms-effects-cell-label">05.01 — Magnetic Button</div>
+            <div class="ms-effects-cell-title">Cursor Attraction</div>
+            <p class="ms-effects-cell-desc">The button drifts toward the cursor position and fills on approach. Magnetic buttons slow users down at a CTA — that friction is intentional.</p>
+            <div class="ms-magnetic-btn"><div class="ms-magnetic-fill"></div><span>✦</span><span>Get In Touch</span><span>→</span></div>
+          </div>
+          <div class="ms-effects-cell ms-muted">
+            <div class="ms-effects-cell-label">05.02 — Morphing Shape</div>
+            <div class="ms-effects-cell-title">Border-Radius Keyframes</div>
+            <p class="ms-effects-cell-desc">Four border-radius states with rotation. Creates organic, living geometry without images. The shape never settles — it communicates that the product is active, not static.</p>
+            <div class="ms-morph-shape"></div>
+          </div>
+          <div class="ms-effects-cell ms-muted">
+            <div class="ms-effects-cell-label">05.03 — Clip-Path Reveal</div>
+            <div class="ms-effects-cell-title">Circle Expansion</div>
+            <p class="ms-effects-cell-desc">clip-path:circle() animates from 0% to 75% — the most dramatic reveal available in pure CSS. The circular expansion from centre feels natural and unforced.</p>
+            <div class="ms-clip-demo">
+              <div class="ms-clip-base"><div class="ms-clip-base-text">HIDDEN</div></div>
+              <div class="ms-clip-reveal"><div class="ms-clip-reveal-text">REVEALED ✦</div></div>
+              <div class="ms-clip-hint">clip-path: circle()</div>
+            </div>
+          </div>
+          <div class="ms-effects-cell" style="background:var(--cream)">
+            <div class="ms-effects-cell-label">05.04 — Page Transition Wipe</div>
+            <div class="ms-effects-cell-title">The Curtain</div>
+            <p class="ms-effects-cell-desc">Black fills left-to-right then retracts right-to-left. Between those two moments, the page has changed. The most cinematic transition in pure CSS.</p>
+            <div class="ms-wipe-stage">
+              <div class="ms-wipe-panel"><div class="ms-wipe-panel-title">Home</div><p class="ms-wipe-panel-body">Origin point of every journey.</p></div>
+              <div class="ms-wipe-panel"><div class="ms-wipe-panel-title">Work</div><p class="ms-wipe-panel-body">Where the projects live.</p></div>
+              <div class="ms-wipe-panel"><div class="ms-wipe-panel-title">Contact</div><p class="ms-wipe-panel-body">The call to action.</p></div>
+              <div class="ms-wipe-curtain"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 06 PARTICLES -->
+      <div class="ms-section" id="ms-s06">
+        <div class="ms-section-header ms-reveal">
+          <div><div class="ms-sec-label">06</div><h2 class="ms-sec-h2">PARTICLE<br>CANVAS</h2></div>
+          <p class="ms-sec-note">Pure JS canvas. Move your cursor through the field — particles repel and reconnect.</p>
+        </div>
+        <div class="ms-canvas-wrapper">
+          <canvas id="ms-particleCanvas"></canvas>
+          <div class="ms-canvas-overlay">
+            <div class="ms-canvas-title">PARTICLE FIELD</div>
+            <div class="ms-canvas-sub">Move your cursor — particles repel and reconnect</div>
+            <div class="ms-canvas-purpose">
+              <div class="ms-canvas-stat"><div class="ms-canvas-stat-n">110</div><div class="ms-canvas-stat-l">Particles</div></div>
+              <div class="ms-canvas-stat"><div class="ms-canvas-stat-n">60</div><div class="ms-canvas-stat-l">FPS Target</div></div>
+              <div class="ms-canvas-stat"><div class="ms-canvas-stat-n">0</div><div class="ms-canvas-stat-l">Libraries</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="ms-canvas-arg">
+          <div class="ms-canvas-arg-cell ms-reveal">
+            <div class="ms-canvas-arg-num">Why it exists</div>
+            <div class="ms-canvas-arg-title">Ambient Motion</div>
+            <p class="ms-canvas-arg-text">A background that responds to presence creates life without demanding attention. The particles don't interrupt the content — they reward curiosity.</p>
+          </div>
+          <div class="ms-canvas-arg-cell ms-reveal ms-d1">
+            <div class="ms-canvas-arg-num">The physics</div>
+            <div class="ms-canvas-arg-title">Repulsion + Friction</div>
+            <p class="ms-canvas-arg-text">Each particle carries velocity damped by a 0.96 friction coefficient per frame. The cursor applies a force inversely proportional to distance — close particles scatter fast, far ones drift.</p>
+          </div>
+          <div class="ms-canvas-arg-cell ms-reveal ms-d2">
+            <div class="ms-canvas-arg-num">The constraint</div>
+            <div class="ms-canvas-arg-title">Zero Dependencies</div>
+            <p class="ms-canvas-arg-text">No Three.js, no GSAP, no WebGL. Vanilla canvas 2D API with devicePixelRatio scaling for retina sharpness. The constraint is the point.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 07 3D -->
+      <div class="ms-section" id="ms-s07">
+        <div class="ms-section-header ms-reveal">
+          <div><div class="ms-sec-label">07</div><h2 class="ms-sec-h2">3D &amp;<br>PERSPECTIVE</h2></div>
+          <p class="ms-sec-note">CSS perspective transforms. Depth without WebGL, no libraries required.</p>
+        </div>
+        <div class="ms-perspective-grid">
+          <div class="ms-persp-cell">
+            <div class="ms-micro-cell-label">07.01 — Card Flip</div>
+            <div class="ms-micro-title">3D Face Reveal</div>
+            <p class="ms-micro-desc">Two faces, one element. backface-visibility:hidden hides the reverse until rotateY(180deg) brings it forward. The flip pauses on each face so both sides are fully readable.</p>
+            <div class="ms-persp-demo">
+              <div class="ms-card-3d"><div class="ms-card-3d-inner"><div class="ms-card-front"><div class="ms-card-front-num">01</div><div class="ms-card-front-title">Motion Study</div><p class="ms-card-front-text">Front face — pure CSS depth</p></div><div class="ms-card-back"><div class="ms-card-back-title">The Back.</div><p class="ms-card-back-text">No JS, no library, no 3D engine.</p></div></div></div>
+            </div>
+            <p class="ms-persp-rationale">Used for product cards, pricing tiers, or any UI where two states of the same item need to coexist without a layout shift. The flip communicates reversibility.</p>
+          </div>
+          <div class="ms-persp-cell ms-muted">
+            <div class="ms-micro-cell-label">07.02 — Perspective Tilt</div>
+            <div class="ms-micro-title">Light Simulation</div>
+            <p class="ms-micro-desc">The card tilts toward a simulated cursor position while a radial highlight sweeps across the surface — mimicking a physical object under a point light source.</p>
+            <div class="ms-persp-demo">
+              <div class="ms-tilt-card"><div class="ms-tilt-shine"></div><div class="ms-tilt-card-title">Tilt Follow</div><p class="ms-tilt-card-text">CSS perspective() + rotateX/Y driven by keyframes. Specular highlight animating in sync.</p></div>
+            </div>
+            <p class="ms-persp-rationale">Used for premium product showcases or dashboard widgets where physicality signals value. The light simulation makes the user feel they could reach in and pick it up.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- REFLECTION -->
+      <div class="ms-case-strip">
+        <div class="ms-case-strip-label">Reflection</div>
+        <h2>THE RULE <span class="ms-outline">BEHIND</span><br>EVERY ANIMATION.</h2>
+        <div class="ms-insights">
+          <div class="ms-insight ms-reveal"><div class="ms-insight-n">3s</div><div class="ms-insight-l">Max animation duration</div><p class="ms-insight-txt">Anything longer than 3 seconds stops being animation and starts being load time. Keep every motion under 1 second where possible — 3s is the absolute ceiling.</p></div>
+          <div class="ms-insight ms-reveal ms-d1"><div class="ms-insight-n">1</div><div class="ms-insight-l">Job per animation</div><p class="ms-insight-txt">Signal, confirm, guide, or delight. Pick one. An animation trying to do all four does none of them well. When you can't explain what one job an animation does, remove it.</p></div>
+          <div class="ms-insight ms-reveal ms-d2"><div class="ms-insight-n">0</div><div class="ms-insight-l">Animations without purpose</div><p class="ms-insight-txt">If you can't complete the sentence "this animation exists to ___", it shouldn't exist. Motion is a communication tool. When it communicates nothing, it is noise.</p></div>
+        </div>
+      </div>
+
+    </div><!-- /ms-wrap -->
+
+    <div class="cs-cta-bar">
+      <button class="btn-outline-manga" onclick="closeCS('motion');openCS('agentos')">Next: AgentOS Case Study <span class="arr">→</span></button>
+    </div>
+  </div>
+</div>
+
 <!-- ═══════════════════════════════════════════
      CASE STUDY OVERLAY — AGENTOS
 ═══════════════════════════════════════════ -->
@@ -1270,7 +1948,7 @@ function loadIframe(id){
     <div class="cs-hero">
       <div class="cs-hero-left">
         <div>
-          <div class="cs-tag">Case Study 01</div>
+          <div class="cs-tag">Case Study 02</div>
           <div class="cs-title">AgentOS</div>
           <div class="cs-subtitle">Designing an Intuitive Interface for AI-Augmented Contact Center Agents</div>
         </div>
@@ -1683,7 +2361,8 @@ function loadIframe(id){
     </div>
     <div class="cs-cta-bar">
       <a href="https://tsachkarski.github.io/AgentOS/" target="_blank" rel="noopener" class="btn-manga"><span>View Live Project ↗</span></a>
-      <button class="btn-outline-manga" onclick="closeCS('agentos');openCS('forma')">Next: Forma Case Study <span class="arr">→</span></button>
+      <button class="btn-outline-manga" onclick="closeCS('agentos');openCS('motion')"><span class="arr">←</span> Prev: Motion Study</button>
+      <button class="btn-outline-manga" onclick="closeCS('agentos');openCS('forma')">Next: Forma <span class="arr">→</span></button>
     </div>
   </div>
 </div>
@@ -1701,7 +2380,7 @@ function loadIframe(id){
     <div class="cs-hero">
       <div class="cs-hero-left">
         <div>
-          <div class="cs-tag">Case Study 02</div>
+          <div class="cs-tag">Case Study 03</div>
           <div class="cs-title">Forma</div>
           <div class="cs-subtitle">Curated Living Objects — A Luxury E-Commerce Experience</div>
         </div>
@@ -2138,6 +2817,7 @@ function loadIframe(id){
 
 <script>
 // ── CASE STUDY OVERLAY SYSTEM ──
+var msInited = false;
 function openCS(id){
   var el = document.getElementById('cs-'+id);
   if(!el) return;
@@ -2146,6 +2826,8 @@ function openCS(id){
   // scroll drawer to top
   var drawer = el.querySelector('.cs-drawer');
   if(drawer) drawer.scrollTop = 0;
+  // Init motion study on first open
+  if(id === 'motion' && !msInited){ msInited = true; setTimeout(initMotionStudy, 80); }
   // close on backdrop click
   el.addEventListener('click', function backdropClose(e){
     if(e.target === el){ closeCS(id); el.removeEventListener('click', backdropClose); }
@@ -2169,6 +2851,145 @@ document.querySelectorAll('.cs-close-btn,.cs-cta-bar .btn-manga,.cs-cta-bar .btn
   el.addEventListener('mouseenter',function(){document.body.classList.add('hov')});
   el.addEventListener('mouseleave',function(){document.body.classList.remove('hov')});
 });
+
+function initMotionStudy(){
+    // Scroll reveal for .ms-reveal elements inside the drawer
+    var msDrawer = document.querySelector('#cs-motion .cs-drawer');
+    if(!msDrawer) return;
+    var msObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('ms-visible'); });
+    },{threshold:.1, root: msDrawer, rootMargin: '0px 0px -40px 0px'});
+    msDrawer.querySelectorAll('.ms-reveal').forEach(function(el){ msObs.observe(el); });
+    // Force-check any reveals already in viewport on open
+    setTimeout(function(){
+      msDrawer.querySelectorAll('.ms-reveal').forEach(function(el){
+        var r = el.getBoundingClientRect();
+        var dr = msDrawer.getBoundingClientRect();
+        if(r.top < dr.bottom && r.bottom > dr.top) el.classList.add('ms-visible');
+      });
+    }, 200);
+
+    // Checkbox auto-cycle
+    var items = [...msDrawer.querySelectorAll('#ms-checkDemo .ms-check-item')];
+    var patterns = [[true,false,true],[false,true,false],[true,true,false],[false,false,true],[true,false,false]];
+    var cIdx = 0;
+    function applyCheck(p){ items.forEach(function(item,i){ item.classList.toggle('ms-checked', p[i]); }); }
+    applyCheck(patterns[0]);
+    setInterval(function(){ cIdx=(cIdx+1)%patterns.length; applyCheck(patterns[cIdx]); }, 1400);
+
+    // Toggle auto-cycle
+    var seqs = [[true,false,true],[false,true,false],[true,true,true],[false,false,false],[true,false,false],[false,true,true]];
+    var tIdx = 0;
+    var togs = [msDrawer.querySelector('#ms-tog0'),msDrawer.querySelector('#ms-tog1'),msDrawer.querySelector('#ms-tog2')];
+    setInterval(function(){ tIdx=(tIdx+1)%seqs.length; seqs[tIdx].forEach(function(on,i){ if(togs[i]) togs[i].classList.toggle('ms-on',on); }); }, 1600);
+
+    // H-card active cycle
+    var hCards = [...msDrawer.querySelectorAll('.ms-h-card')].slice(0,6);
+    if(hCards.length){ var hActive=0; hCards[0].classList.add('ms-active'); setInterval(function(){ hCards[hActive].classList.remove('ms-active'); hActive=(hActive+1)%hCards.length; hCards[hActive].classList.add('ms-active'); }, 2400); }
+
+    // Float label auto-demo
+    var floatFields = [{gId:'ms-fg1',dId:'ms-fi1',text:'Trajche S.'},{gId:'ms-fg2',dId:'ms-fi2',text:'hello@tsachkarski.com'}];
+    function animFloat(f, done){
+      var g=msDrawer.querySelector('#'+f.gId), d=msDrawer.querySelector('#'+f.dId);
+      if(!g||!d) return done&&done();
+      g.classList.add('ms-active'); var i=0;
+      var iv=setInterval(function(){ d.textContent=f.text.slice(0,++i); if(i>=f.text.length){ clearInterval(iv); setTimeout(function(){ g.classList.remove('ms-active'); setTimeout(function(){ d.textContent=''; done&&done(); },400); },1400); } },75);
+    }
+    function runFloat(i){ animFloat(floatFields[i], function(){ setTimeout(function(){ runFloat((i+1)%floatFields.length); },500); }); }
+    setTimeout(function(){ runFloat(0); }, 600);
+
+    // Counter auto-count
+    var cEl=msDrawer.querySelector('#ms-counterNum'), cTrack=msDrawer.querySelector('#ms-counterTrack');
+    if(cEl&&cTrack){
+      var targets=[3,7,12,18,24]; var tcIdx=0; var current=0;
+      targets.forEach(function(){ var p=document.createElement('div'); p.className='ms-counter-pip'; cTrack.appendChild(p); });
+      var pips=[...cTrack.querySelectorAll('.ms-counter-pip')];
+      function updatePips(){ pips.forEach(function(p,i){ p.classList.toggle('ms-active',i===tcIdx); }); }
+      updatePips();
+      function countTo(target,cb){ var step=target>current?1:-1; var iv=setInterval(function(){ current+=step; cEl.textContent=String(current).padStart(2,'0'); cEl.classList.remove('ms-bump'); void cEl.offsetWidth; cEl.classList.add('ms-bump'); if(current===target){ clearInterval(iv); setTimeout(cb,900); } },55); }
+      function nextCount(){ tcIdx=(tcIdx+1)%targets.length; updatePips(); if(tcIdx===0){ current=0; cEl.textContent='00'; setTimeout(function(){ countTo(targets[0],nextCount); },400); } else { countTo(targets[tcIdx],nextCount); } }
+      countTo(targets[0],nextCount);
+    }
+
+    // Progress bars auto-loop
+    var bars = [
+      {f:msDrawer.querySelector('#ms-pf1'),v:msDrawer.querySelector('#ms-pv1'),t:92},
+      {f:msDrawer.querySelector('#ms-pf2'),v:msDrawer.querySelector('#ms-pv2'),t:87},
+      {f:msDrawer.querySelector('#ms-pf3'),v:msDrawer.querySelector('#ms-pv3'),t:74},
+      {f:msDrawer.querySelector('#ms-pf4'),v:msDrawer.querySelector('#ms-pv4'),t:68},
+    ].filter(function(b){ return b.f&&b.v; });
+    function animNum(b,from,to){ var dur=1400,start=performance.now(); (function tick(now){ var p=Math.min((now-start)/dur,1),e=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2; b.v.textContent=Math.round(from+(to-from)*e)+'%'; if(p<1) requestAnimationFrame(tick); })(start); }
+    function runBars(toFull){ bars.forEach(function(b,i){ setTimeout(function(){ b.f.style.width=(toFull?b.t:0)+'%'; animNum(b,toFull?0:b.t,toFull?b.t:0); },i*130); }); setTimeout(function(){ runBars(!toFull); },3000); }
+    setTimeout(function(){ runBars(true); },500);
+
+    // Typewriter
+    var phrases=['GOOD DESIGN MOVES.','MOTION BUILDS TRUST.','ANIMATION IS COMMUNICATION.','EVERY FRAME IS A DECISION.'];
+    var pIdx=0,charIdx=0,del=false;
+    var twEl=msDrawer.querySelector('#ms-twContent');
+    if(twEl){ function twTick(){ var p=phrases[pIdx]; if(!del){ twEl.textContent=p.slice(0,++charIdx); if(charIdx===p.length){ del=true; setTimeout(twTick,1800); return; } } else { twEl.textContent=p.slice(0,--charIdx); if(charIdx===0){ del=false; pIdx=(pIdx+1)%phrases.length; } } setTimeout(twTick,del?38:82); } twTick(); }
+
+    // Scramble auto-loop
+    var scEl=msDrawer.querySelector('#ms-scrambleText');
+    if(scEl){
+      var scWords=['MOTION IS A DESIGN TOOL','ANIMATION BUILDS TRUST','EVERY FRAME IS A DECISION','MOVE WITH PURPOSE'];
+      var SC='ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#%'; var scIdx=0;
+      function scrambleTo(target,cb){ var iter=0; var iv=setInterval(function(){ scEl.textContent=target.split('').map(function(c,i){ return c===' '?' ':i<iter?target[i]:SC[Math.floor(Math.random()*SC.length)]; }).join(''); if(++iter>target.length){ clearInterval(iv); setTimeout(cb,2400); } },36); }
+      function scLoop(){ scIdx=(scIdx+1)%scWords.length; scrambleTo(scWords[scIdx],scLoop); }
+      setTimeout(function(){ scrambleTo(scWords[0],scLoop); },1000);
+    }
+
+    // Split line reveal auto-loop
+    var splitLines=[...msDrawer.querySelectorAll('.ms-split-line')];
+    if(splitLines.length){
+      splitLines.forEach(function(l){ l.style.transform='translateY(110%)'; l.style.display='block'; });
+      function msShowLines(){ splitLines.forEach(function(l,i){ l.style.transition='transform .8s cubic-bezier(.77,0,.175,1) '+(i*.13)+'s'; l.style.transform='translateY(0)'; }); setTimeout(msHideLines,3400); }
+      function msHideLines(){ [...splitLines].reverse().forEach(function(l,i){ l.style.transition='transform .55s cubic-bezier(.77,0,.175,1) '+(i*.07)+'s'; l.style.transform='translateY(110%)'; }); setTimeout(msShowLines,1100); }
+      setTimeout(msShowLines,200);
+    }
+
+    // Char cascade auto-loop
+    var charCont=msDrawer.querySelector('#ms-charText');
+    if(charCont){
+      var cStr='WHEN MOTION HAS PURPOSE IT DISAPPEARS';
+      cStr.split('').forEach(function(ch,i){ var s=document.createElement('span'); s.className='ms-ch'; s.textContent=ch===' '?' ':ch; s.style.cssText='display:inline-block;opacity:0;transform:translateY(20px);transition:opacity .4s '+(i*26)+'ms,transform .4s '+(i*26)+'ms'; charCont.appendChild(s); });
+      var chs=[...charCont.querySelectorAll('.ms-ch')];
+      function ccShow(){ chs.forEach(function(c){ c.style.opacity='1'; c.style.transform='translateY(0)'; }); }
+      function ccHide(){ [...chs].reverse().forEach(function(c,i){ c.style.transition='opacity .28s '+(i*16)+'ms,transform .28s '+(i*16)+'ms'; c.style.opacity='0'; c.style.transform='translateY(-14px)'; }); }
+      function ccReset(){ chs.forEach(function(c){ c.style.transition='none'; c.style.opacity='0'; c.style.transform='translateY(20px)'; }); requestAnimationFrame(function(){ requestAnimationFrame(function(){ chs.forEach(function(c,i){ c.style.transition='opacity .4s '+(i*26)+'ms,transform .4s '+(i*26)+'ms'; }); }); }); }
+      function ccLoop(){ ccShow(); setTimeout(function(){ ccHide(); setTimeout(function(){ ccReset(); setTimeout(ccLoop,700); },1000); },3500); }
+      setTimeout(ccLoop,400);
+    }
+
+    // Button state auto-cycle
+    var sBtn=msDrawer.querySelector('#ms-stateBtn'), sBtnTxt=msDrawer.querySelector('#ms-stateBtnTxt'), sBtnSpin=msDrawer.querySelector('#ms-stateBtnSpinner');
+    if(sBtn){
+      var btnStates=[{bg:'var(--black)',bc:'var(--black)',color:'var(--cream)',label:'Submit Form',spin:false,dur:2000},{bg:'var(--gray)',bc:'var(--gray)',color:'var(--cream)',label:'Processing...',spin:true,dur:2000},{bg:'#1c6b3a',bc:'#1c6b3a',color:'var(--cream)',label:'✓  Success',spin:false,dur:1800},{bg:'var(--red)',bc:'var(--red)',color:'var(--cream)',label:'Error — Try Again',spin:false,dur:1800}];
+      var bsIdx=0;
+      function applyBtnState(){ var st=btnStates[bsIdx]; sBtn.style.background=st.bg; sBtn.style.borderColor=st.bc; sBtn.style.color=st.color; sBtnTxt.textContent=st.label; sBtnSpin.style.display=st.spin?'inline-block':'none'; setTimeout(function(){ bsIdx=(bsIdx+1)%btnStates.length; applyBtnState(); },st.dur); }
+      applyBtnState();
+    }
+
+    // Particle canvas
+    var canvas=msDrawer.querySelector('#ms-particleCanvas');
+    if(canvas){
+      var ctx=canvas.getContext('2d'); var W,H,dpr=window.devicePixelRatio||1,mouse={x:-999,y:-999}; var pts=[];
+      function msResize(){ var wrap=canvas.parentElement; W=wrap.offsetWidth||800; H=wrap.offsetHeight||420; canvas.width=W*dpr; canvas.height=H*dpr; canvas.style.width=W+'px'; canvas.style.height=H+'px'; ctx.setTransform(dpr,0,0,dpr,0,0); }
+      msResize();
+      // Re-init if size was 0 on first call
+      setTimeout(function(){ if(W<10||H<10){ msResize(); pts=[]; for(var ii=0;ii<110;ii++){ pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.5,vy:(Math.random()-.5)*.5,r:Math.random()*2.5+.5,a:Math.random()*.6+.2,red:Math.random()<.15}); } } }, 300);
+      for(var i=0;i<110;i++){ pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.5,vy:(Math.random()-.5)*.5,r:Math.random()*2.5+.5,a:Math.random()*.6+.2,red:Math.random()<.15}); }
+      window.addEventListener('resize',msResize,{passive:true});
+      canvas.addEventListener('mousemove',function(e){ var r=canvas.getBoundingClientRect(); mouse.x=e.clientX-r.left; mouse.y=e.clientY-r.top; });
+      canvas.addEventListener('mouseleave',function(){ mouse.x=-999; mouse.y=-999; });
+      function msDraw(){
+        ctx.clearRect(0,0,W,H);
+        pts.forEach(function(p){ var dx=p.x-mouse.x,dy=p.y-mouse.y,d=Math.sqrt(dx*dx+dy*dy); if(d<140&&d>0){ var f=(140-d)/140; p.vx+=dx/d*f*.9; p.vy+=dy/d*f*.9; } p.vx*=.96; p.vy*=.96; p.x+=p.vx; p.y+=p.vy; if(p.x<0)p.x=W; if(p.x>W)p.x=0; if(p.y<0)p.y=H; if(p.y>H)p.y=0; ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.fillStyle=p.red?'rgba(217,58,43,'+p.a+')':'rgba(240,237,230,'+p.a+')'; ctx.fill(); });
+        for(var ii=0;ii<pts.length;ii++){ for(var jj=ii+1;jj<pts.length;jj++){ var a=pts[ii],b=pts[jj],dd=Math.sqrt((a.x-b.x)**2+(a.y-b.y)**2); if(dd<90){ ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.strokeStyle='rgba(240,237,230,'+(1-dd/90)*.09+')'; ctx.lineWidth=.5; ctx.stroke(); } } }
+        requestAnimationFrame(msDraw);
+      }
+      msDraw();
+    }
+  }
 </script>
 
 </body>
