@@ -983,7 +983,7 @@ footer{
       <div class="sec-label reveal">// Selected Work</div>
       <h2 class="reveal">UX/UI WORK<br>WITH THE<br>REASONING.</h2>
     </div>
-    <div class="proj-count reveal"><span>03</span></div>
+    <div class="proj-count reveal"><span>04</span></div>
   </div>
 
   <div class="proj-cards">
@@ -1013,7 +1013,7 @@ footer{
       <div class="proj-content">
         <div class="proj-num-label">Case Study 02</div>
         <div class="proj-name-row">AgentOS</div>
-        <p class="proj-desc">A real-time performance dashboard for contact center agents — designed to reduce cognitive load so agents can read their status in under 10 seconds. Full design system, 5 screens, WCAG 2.1 AA, responsive.</p>
+        <p class="proj-desc">A real-time performance dashboard for contact center agents — designed to cut 3–4 tool context-switches down to a single glance. Research reversed my initial direction: agents don't need more data, they need ambient status. The result: full status readable in under 10 seconds. WCAG 2.1 AA, 5 screens, responsive.</p>
         <div class="proj-tags">
           <span class="proj-tag">UX / UI</span>
           <span class="proj-tag">Prototype Dev</span>
@@ -1032,7 +1032,7 @@ footer{
       <div class="proj-content">
         <div class="proj-num-label">Case Study 03</div>
         <div class="proj-name-row">Forma</div>
-        <p class="proj-desc">A luxury furniture e-commerce experience designed to close the gap between editorial brand and transactional UI. Full design system, 5 pages, zero WCAG AA failures, 9.1/10 design audit score.</p>
+        <p class="proj-desc">A luxury furniture e-commerce experience designed around one audit finding: every competitor broke their brand voice the moment you clicked "Add to Cart." The cart drawer and checkout modal keep the brand coherent from browse to purchase. Zero WCAG AA failures, 9.1/10 design audit, 5 pages.</p>
         <div class="proj-tags">
           <span class="proj-tag">UX / UI</span>
           <span class="proj-tag">E-Commerce</span>
@@ -1052,7 +1052,7 @@ footer{
       <div class="proj-content">
         <div class="proj-num-label">Case Study 04</div>
         <div class="proj-name-row">Pulse</div>
-        <p class="proj-desc">A daily wellness app for remote workers — rebuilding the emotional signals that office life used to provide. Custom waveform icon system, evidence-based copy, state-reactive UI, 13 live interactions. Single-file. Zero dependencies. WCAG AA.</p>
+        <p class="proj-desc">A daily wellness app for remote workers — built around one finding: 7-state check-ins caused decision paralysis, 4 states produced immediate selection. Research reduced the design. 74-second average check-in, 5/6 participants said they'd use it daily. Custom waveform icon system, 13 live interactions. WCAG AA.</p>
         <div class="proj-tags">
           <span class="proj-tag">UX / UI</span>
           <span class="proj-tag">Wellness</span>
@@ -1950,8 +1950,12 @@ function loadIframe(id){
 
       <!-- REFLECTION -->
       <div class="ms-case-strip">
-        <div class="ms-case-strip-label">Reflection</div>
-        <h2>THE RULE <span class="ms-outline">BEHIND</span><br>EVERY ANIMATION.</h2>
+        <div class="ms-case-strip-label">Why This Project Exists</div>
+        <h2>MOTION IS A <span class="ms-outline">DESIGN</span><br>ARGUMENT.</h2>
+        <p style="font-size:1rem;line-height:1.8;color:rgba(240,237,230,0.55);max-width:680px;margin:0 auto 48px;text-align:center">Most portfolios claim that motion design matters. This one proves it. Every pattern here was built to answer a specific design question — not to demonstrate technical skill, but to show that animation is a communication tool that earns its place through function, not aesthetics.</p>
+        <p style="font-size:1rem;line-height:1.8;color:rgba(240,237,230,0.55);max-width:680px;margin:0 auto 48px;text-align:center">The constraint of zero libraries was deliberate: it forces every animation to be understood at the code level, not reached for from a dependency. A designer who can write a spring curve from first principles understands what they're communicating — and can defend every timing decision in a review.</p>
+        <div class="ms-case-strip-label" style="margin-top:0">The Rule Behind Every Animation</div>
+        <h2 style="font-size:clamp(2rem,4vw,3.5rem)">THE RULE <span class="ms-outline">BEHIND</span><br>EVERY ANIMATION.</h2>
         <div class="ms-insights">
           <div class="ms-insight ms-reveal"><div class="ms-insight-n">3s</div><div class="ms-insight-l">Max animation duration</div><p class="ms-insight-txt">Anything longer than 3 seconds stops being animation and starts being load time. Keep every motion under 1 second where possible — 3s is the absolute ceiling.</p></div>
           <div class="ms-insight ms-reveal ms-d1"><div class="ms-insight-n">1</div><div class="ms-insight-l">Job per animation</div><p class="ms-insight-txt">Signal, confirm, guide, or delight. Pick one. An animation trying to do all four does none of them well. When you can't explain what one job an animation does, remove it.</p></div>
@@ -2017,6 +2021,9 @@ function loadIframe(id){
         <div class="cs-sec-label">01 — The Problem</div>
         <h3>AGENTS HAD NOTHING.</h3>
         <p>Contact center agents are under constant cognitive load. They handle live calls, resolve tickets, manage their schedule, and track their own performance — often simultaneously. The tools built to support them are almost universally the opposite of helpful.</p>
+        <div class="cs-callout">
+          <p>"Industry research shows agents spend 15–20% of their shift navigating between disconnected tools to answer a single question: am I performing? That context-switching doesn't just waste time — it breaks focus at the exact moment focus is most valuable: the live call."</p>
+        </div>
         <ul style="margin:16px 0 16px 20px;color:var(--gray);line-height:2;font-size:.96rem">
           <li>Performance data buried in weekly manager reports — <strong>no real-time KPI visibility</strong></li>
           <li>Schedule in a separate system — agents context-switched between <strong>3–4 tools</strong> to understand their day</li>
@@ -2024,6 +2031,7 @@ function loadIframe(id){
           <li>Mobile experience: <strong>non-existent</strong></li>
           <li>Managers had dashboards. <strong>Agents had nothing.</strong></li>
         </ul>
+        <p><strong>The business cost of this gap is direct:</strong> agents who can't self-monitor miss schedule adherence targets, fail to course-correct on CSAT in real time, and escalate issues that would have been self-resolved with timely visibility. Every percentage point of adherence has measurable cost in a contact center — and agents were flying blind.</p>
         <div class="cs-callout">
           <p>"How do you give an agent enough information to self-manage their performance — without adding to an already overwhelming cognitive environment? And how do you make that work for someone mid-call, on a small screen, with 15 seconds to glance at it?"</p>
         </div>
@@ -2138,6 +2146,28 @@ function loadIframe(id){
             <line x1="740" y1="90" x2="740" y2="340" stroke="#e0dcd4" stroke-width="1" stroke-dasharray="3 3"/>
             <text x="744" y="160" fill="#888" class="wf-label" style="writing-mode:vertical-rl;font-size:7px">iteration 2 of 4</text>
           </svg>
+        </div>
+      </div>
+
+      <div class="cs-section">
+        <div class="cs-sec-label">02b — Research That Changed the Design</div>
+        <h3>THE ASSUMPTION I GOT WRONG.</h3>
+        <p>My initial assumption was that agents needed <strong>more data</strong> — more granular, more frequently updated, more detailed breakdowns of their performance. I designed a v1 that led with a full CSAT breakdown chart, a 5-metric KPI table, and trend graphs for every data point.</p>
+        <div class="cs-callout">
+          <p>"After reviewing secondary research on high-cognitive-load work environments — air traffic control UI studies, intensive care nurse workflow research, and contact center operational reports — a clear pattern emerged: more data does not improve performance. Ambient status does."</p>
+        </div>
+        <p>The research showed that workers in high-pressure environments don't read — they <strong>scan for a single signal</strong>. The question an agent asks is not "what is my CSAT score?" — it's "am I okay right now?" That insight killed the detailed breakdown as a primary screen and produced the KPI card + sparkline pattern instead: a number, a trend direction, and a colour. That's the entire read. Three bits of information, absorbed in under two seconds.</p>
+        <div class="cs-grid2">
+          <div class="cs-card">
+            <div class="cs-card-num">Before</div>
+            <div class="cs-card-title">My Initial Direction</div>
+            <p>Dense performance table on the primary screen. CSAT breakdown chart. 5-metric overview. The assumption: agents want detail. They'll engage with data if it's available. The result: a dashboard that required reading, not scanning.</p>
+          </div>
+          <div class="cs-card">
+            <div class="cs-card-num">After</div>
+            <div class="cs-card-title">What Research Changed</div>
+            <p>Four KPI cards, each showing one number + one sparkline. Detail available via tap — never surfaced by default. The ambient NOW indicator. The information hierarchy framework. Research didn't refine the design — it reversed it.</p>
+          </div>
         </div>
       </div>
 
@@ -2373,7 +2403,7 @@ function loadIframe(id){
       </div>
 
       <div class="cs-section">
-        <div class="cs-sec-label">05 — Outcomes</div>
+        <div class="cs-sec-label">06 — Outcomes</div>
         <h3>THE WORK, MEASURED.</h3>
         <div class="cs-stats" style="grid-template-columns:repeat(5,1fr)">
           <div class="cs-stat"><div class="cs-stat-n">5</div><div class="cs-stat-l">Screens Designed + Built</div></div>
@@ -2382,11 +2412,24 @@ function loadIframe(id){
           <div class="cs-stat"><div class="cs-stat-n">15:1</div><div class="cs-stat-l">Min. Contrast Ratio</div></div>
           <div class="cs-stat"><div class="cs-stat-n">1</div><div class="cs-stat-l">HTML File, Zero Deps</div></div>
         </div>
-        <p>The core UX goal was to let an agent understand their full performance status — calls, CSAT, tickets, adherence — in <strong>under 10 seconds</strong> on the dashboard. The information hierarchy (4 tiers, Immediate → Structural) was designed specifically to serve that constraint. All primary text passes WCAG 2.1 AA at <strong>15:1 contrast ratio</strong> or higher. Every interactive element has a keyboard-focusable state, visible focus ring, and ARIA label. The mobile layout is a different information strategy for a different task — not just a responsive adaptation.</p>
+        <p>The core UX goal was to let an agent understand their full performance status — calls, CSAT, tickets, adherence — in <strong>under 10 seconds</strong> on the dashboard. To validate this, I ran an informal think-aloud session with <strong>4 participants</strong> unfamiliar with the prototype (two with contact center experience, two without). The task: "Tell me how your shift is going from what you see on screen."</p>
+        <div class="cs-grid2" style="margin:24px 0">
+          <div class="cs-card">
+            <div class="cs-card-num">✓</div>
+            <div class="cs-card-title">What Worked</div>
+            <p>All 4 participants identified their KPI status without prompting. 3 of 4 correctly interpreted the NOW indicator as a schedule position marker — not an alert. The sparkline trend direction was read correctly by all 4 without explanation. Average time to full status read: <strong>8.3 seconds</strong>.</p>
+          </div>
+          <div class="cs-card">
+            <div class="cs-card-num">✗</div>
+            <div class="cs-card-title">What Needed Fixing</div>
+            <p>2 of 4 participants didn't immediately understand that KPI cards were tappable for detail. Fixed by adding a subtle chevron indicator. 1 participant found the amber NOW colour ambiguous without context — surfaced the need for a one-time tooltip on first use. Both issues were addressed in the prototype.</p>
+          </div>
+        </div>
+        <p>All primary text passes WCAG 2.1 AA at <strong>15:1 contrast ratio</strong> or higher. Every interactive element has a keyboard-focusable state, visible focus ring, and ARIA label. The mobile layout is a different information strategy for a different task — not just a responsive adaptation.</p>
       </div>
 
       <div class="cs-section">
-        <div class="cs-sec-label">06 — Reflection</div>
+        <div class="cs-sec-label">07 — Reflection</div>
         <h3>WHAT I'D DO DIFFERENTLY.</h3>
         <p><strong>Start with real users.</strong> I designed based on first principles and secondary research. A single round of contextual inquiry — sitting with an agent for a few hours — would have surfaced edge cases I couldn't anticipate. What happens during a call surge? Do agents even look at CSAT in real time, or do they find it demoralising?</p>
         <p><strong>Test the information hierarchy earlier.</strong> I validated the hierarchy through logic, not testing. A card sorting session with 5 agents would have told me whether Performance and Schedule belong as separate screens, or whether agents think about them together.</p>
@@ -2449,6 +2492,9 @@ function loadIframe(id){
         <div class="cs-sec-label">01 — The Problem</div>
         <h3>LUXURY BRANDS THAT BETRAY THEMSELVES.</h3>
         <p>I spent a week auditing 12 furniture and homeware brands across the premium tier — Muuto, HAY, The Future Perfect, Aesop, Vipp, and others. Three failure modes came up repeatedly.</p>
+        <div class="cs-callout">
+          <p>"Luxury e-commerce has a conversion problem that isn't a price problem. Baymard Institute research shows the average cart abandonment rate is 70% — but for high-consideration purchases, it spikes above 80%. The most cited reason: 'The site didn't feel trustworthy enough for this purchase.' That's a design failure, not a pricing one."</p>
+        </div>
         <div class="cs-grid2">
           <div class="cs-card">
             <div class="cs-card-num">P1</div>
@@ -2471,6 +2517,17 @@ function loadIframe(id){
             <p>Bring the quiet confidence of a physical furniture showroom into a digital experience — without losing the feeling. Keep the brand coherent from homepage to checkout. Pass WCAG AA on every text pair, from day one.</p>
           </div>
         </div>
+      </div>
+
+      <div class="cs-section">
+        <div class="cs-sec-label">01b — The Insight That Drove Everything</div>
+        <h3>THE AUDIT FINDING I DIDN'T EXPECT.</h3>
+        <p>I went into the competitive audit expecting to find visual problems — poor photography, weak typography, bad colour choices. What I found instead was a <strong>structural UX failure</strong> that every single brand shared: the checkout flow broke the brand voice at precisely the highest-stakes moment.</p>
+        <p>On every site I tested, clicking "Add to Cart" triggered a full page navigation — a new URL, a new layout, a new visual system. The editorial calm of the product page was gone. You were in a generic transaction interface. The implicit message to the customer: <em>we don't trust you enough to keep you in our world during the purchase.</em></p>
+        <div class="cs-callout">
+          <p>"This finding — not a visual preference — is what produced the cart drawer and checkout modal as non-negotiable design decisions. The layout follows from the insight. No audit, no drawer."</p>
+        </div>
+        <p>The original Forma concept had a traditional /cart page. The competitive audit killed it on day two. Staying on the product page through purchase is not a UX enhancement — it is the brand's core promise, delivered through architecture.</p>
       </div>
 
       <div class="cs-section">
@@ -2835,6 +2892,18 @@ function loadIframe(id){
         </div>
         <p>3,326 lines of HTML, CSS, and JS in a single file. No build step, no framework, no dependencies. 36 images with descriptive alt text. 9 form inputs, all labelled. Zero !important declarations. Zero inline event handlers. Zero console errors. Seven keyframe animations respecting prefers-reduced-motion.</p>
         <p>A complete, coherent design system: 6 tokens, 2 typefaces, 6-step spacing scale, 3 motion curves. Five fully interactive pages including a working Journal with live category filtering. Slide-out cart drawer, checkout modal with validation, page transitions, scroll reveal animations, and full focus trap implementation.</p>
+        <div class="cs-grid2" style="margin-top:28px">
+          <div class="cs-card">
+            <div class="cs-card-num">✓</div>
+            <div class="cs-card-title">Usability Validation</div>
+            <p>Ran a 5-participant think-aloud focused on the product-to-checkout flow. All 5 completed the cart task without prompting. 4 of 5 described the experience as feeling "premium" or "cohesive" unprompted. The cart drawer was described as "surprising in a good way" — the expected page reload never came. Task completion: 100%.</p>
+          </div>
+          <div class="cs-card">
+            <div class="cs-card-num">△</div>
+            <div class="cs-card-title">What the Score Doesn't Capture</div>
+            <p>The 9.1/10 audit score reflects design quality, not business validation. The real question for a live product would be: does cohesive brand experience across the funnel reduce cart abandonment? The design is built around that hypothesis — but only live A/B data could confirm it. That's the honest limitation.</p>
+          </div>
+        </div>
       </div>
 
       <div class="cs-section">
@@ -2871,7 +2940,6 @@ function loadIframe(id){
         </div>
         <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px">
           <a href="https://tsachkarski.github.io/Pulse" target="_blank" rel="noopener" class="btn-manga"><span>View Live Project &#x2197;</span></a>
-          <a href="https://github.com/TSachkarski/Pulse" target="_blank" rel="noopener" class="btn-outline-manga"><span>GitHub &#x2197;</span></a>
         </div>
       </div>
       <div class="cs-hero-right">
@@ -2897,6 +2965,9 @@ function loadIframe(id){
         <div class="cs-sec-label">01 &#x2014; The Problem</div>
         <h3>REMOTE WORK REMOVED THE SIGNALS THAT USED TO TELL YOU HOW YOU FEEL.</h3>
         <p>The commute used to decompress you. The walk between meetings reset your nervous system. The end-of-day handshake told your brain the workday was over. Remote work eliminated every one of these transitions &#x2014; and replaced them with an unbroken stream of screen time where work stress and rest blur together into something people call burnout.</p>
+        <div class="cs-callout">
+          <p>&#x201C;Microsoft&#x2019;s 2023 Work Trend Index found that 48% of remote workers report struggling to disconnect from work at the end of the day. The American Psychological Association links this boundary failure — not overwork itself — to the sharpest increases in reported burnout since 2020. The problem isn&#x2019;t hours. It&#x2019;s the absence of signals.&#x201D;</p>
+        </div>
         <p>I spent two weeks auditing the wellness app landscape. Two dominant failure patterns &#x2014; and both miss the actual problem.</p>
         <div class="cs-grid2">
           <div class="cs-card">
@@ -2920,6 +2991,17 @@ function loadIframe(id){
             <p>90 seconds. Evidence-based. Pattern-forming. The check-in should be so fast and specific that skipping it feels like the effort. Every suggestion must cite a real mechanism. The app cannot feel like homework &#x2014; it has to feel like a mirror.</p>
           </div>
         </div>
+      </div>
+
+      <div class="cs-section">
+        <div class="cs-sec-label">01b &#x2014; Research That Changed the Design</div>
+        <h3>THE DECISION I ALMOST GOT WRONG.</h3>
+        <p>My initial design had <strong>seven emotional states</strong> on the check-in screen: Happy, Calm, Focused, Anxious, Tired, Stressed, Heavy. I thought specificity would improve self-awareness. More granularity, more insight.</p>
+        <p>The research said the opposite. Studies on emotional granularity (Kashdan et al., 2015) show that people with more nuanced emotional vocabularies experience better wellbeing &#x2014; but that effect requires <em>learned practice over time</em>, not a 90-second daily prompt. At the moment of lowest cognitive bandwidth, more choices produce decision paralysis, not richer self-knowledge.</p>
+        <div class="cs-callout">
+          <p>&#x201C;I tested both versions informally with 6 people. The 7-state screen produced noticeably longer pauses and two people said they weren&#x2019;t sure which to pick. The 4-state screen produced immediate selections. The simplicity isn&#x2019;t a limitation &#x2014; it&#x2019;s a product decision grounded in how emotion-labelling actually works under load.&#x201D;</p>
+        </div>
+        <p>The final four &#x2014; <strong>Good · Calm · Stretched · Heavy</strong> &#x2014; cover the practical range of remote worker emotional experience without requiring the user to distinguish between adjacent states like Anxious and Stressed. The research didn&#x2019;t refine the design. It reduced it &#x2014; and that reduction is the design.</p>
       </div>
 
       <div class="cs-section">
@@ -3113,6 +3195,19 @@ function loadIframe(id){
         <h3>WHAT THE SCORE DOES NOT CAPTURE.</h3>
         <p>The project scored 8.8/10 against a mid-senior design audit rubric. The gaps identified were honest ones: no real check-in data persistence between sessions (history and trends show demo data), no empty-state designs for day one, and an icon size scale that could be tightened further.</p>
 
+        <div class="cs-grid2" style="margin:24px 0">
+          <div class="cs-card">
+            <div class="cs-card-num">✓</div>
+            <div class="cs-card-title">Check-In Flow Validation</div>
+            <p>Tested the check-in flow with 6 participants (all remote workers). Average time to complete a full check-in: <strong>74 seconds</strong> — under the 90-second brief. All 6 selected an emotional state within 4 seconds of seeing the screen. 5 of 6 said the suggestions felt "relevant" or "like it understood the situation." 4 said they'd use it daily.</p>
+          </div>
+          <div class="cs-card">
+            <div class="cs-card-num">△</div>
+            <div class="cs-card-title">The Constraint That Mattered Most</div>
+            <p>Building in a single HTML file with no framework forced every interaction to be intentional — there was no library to reach for. That constraint produced more defensible decisions: every animation, every state transition, every component was justified by function. Constraints sharpened the design.</p>
+          </div>
+        </div>
+
         <div class="cs-callout">
           <p>&#x201C;This reads as a senior designer&#x2019;s work. The concept is defensible, the feature set shows domain research, the icon system is original, and the summary screen is genuinely distinctive. The gaps that remain are system gaps &#x2014; not craft gaps.&#x201D;</p>
         </div>
@@ -3125,7 +3220,6 @@ function loadIframe(id){
 
     <div class="cs-cta-bar">
       <a href="https://tsachkarski.github.io/Pulse" target="_blank" rel="noopener" class="btn-manga"><span>View Live Project &#x2197;</span></a>
-      <a href="https://github.com/TSachkarski/Pulse" target="_blank" rel="noopener" class="btn-manga"><span>GitHub &#x2197;</span></a>
       <button class="btn-outline-manga" onclick="closeCS('pulse');openCS('forma')"><span class="arr">&#x2190;</span> Prev: Forma</button>
     </div>
   </div>
