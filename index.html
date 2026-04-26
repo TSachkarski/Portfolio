@@ -1045,6 +1045,26 @@ footer{
       </div>
     </div>
 
+
+    <div class="proj-item reveal rd3" onclick="openCS('pulse')" role="button" tabindex="0" aria-label="Open Pulse case study">
+      <div class="proj-ghost-num">04</div>
+      <div class="proj-year-badge">2026</div>
+      <div class="proj-content">
+        <div class="proj-num-label">Case Study 04</div>
+        <div class="proj-name-row">Pulse</div>
+        <p class="proj-desc">A daily wellness app for remote workers — rebuilding the emotional signals that office life used to provide. Custom waveform icon system, evidence-based copy, state-reactive UI, 13 live interactions. Single-file. Zero dependencies. WCAG AA.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">UX / UI</span>
+          <span class="proj-tag">Wellness</span>
+          <span class="proj-tag">Design System</span>
+          <span class="proj-tag">Interaction Design</span>
+        </div>
+        <div class="proj-cta-row">
+          <span class="proj-cta-label">Read Case Study <span class="proj-cta-arrow">&#x2197;</span></span>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -2828,10 +2848,289 @@ function loadIframe(id){
     </div>
     <div class="cs-cta-bar">
       <a href="https://tsachkarski.github.io/Forma/" target="_blank" rel="noopener" class="btn-manga"><span>View Live Project ↗</span></a>
-      <button class="btn-outline-manga" onclick="closeCS('forma');openCS('agentos')"><span class="arr">←</span> Back: AgentOS Case Study</button>
+      <button class="btn-outline-manga" onclick="closeCS('forma');openCS('agentos')"><span class="arr">←</span> Back: AgentOS</button>
+      <button class="btn-outline-manga" onclick="closeCS('forma');openCS('pulse')">Next: Pulse <span class="arr">→</span></button>
     </div>
   </div>
 </div>
+
+
+<div class="cs-overlay" id="cs-pulse" role="dialog" aria-modal="true" aria-label="Pulse Case Study">
+  <div class="cs-drawer">
+    <div class="cs-close">
+      <span class="cs-close-label">Case Study 04 &#x2014; Pulse</span>
+      <button class="cs-close-btn" onclick="closeCS('pulse')">Close &#x2715;</button>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-hero-left">
+        <div>
+          <div class="cs-tag">Case Study 04</div>
+          <div class="cs-title">Pulse</div>
+          <div class="cs-subtitle">Daily Wellness for Remote Workers &#x2014; Know How You Actually Feel</div>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px">
+          <a href="https://tsachkarski.github.io/Pulse" target="_blank" rel="noopener" class="btn-manga"><span>View Live Project &#x2197;</span></a>
+          <a href="https://github.com/TSachkarski/Pulse" target="_blank" rel="noopener" class="btn-outline-manga"><span>GitHub &#x2197;</span></a>
+        </div>
+      </div>
+      <div class="cs-hero-right">
+        <div class="cs-meta-grid">
+          <div><div class="cs-meta-lbl">Role</div><div class="cs-meta-val">Solo UX/UI Designer + Frontend Developer</div></div>
+          <div><div class="cs-meta-lbl">Deliverable</div><div class="cs-meta-val">8-Screen Mobile App &#x2014; Full Working Prototype</div></div>
+          <div><div class="cs-meta-lbl">Tools</div><div class="cs-meta-val">HTML / CSS / JavaScript &#x00B7; No Frameworks</div></div>
+          <div><div class="cs-meta-lbl">Scope</div><div class="cs-meta-val">Research &#x00B7; Icon System &#x00B7; Design System &#x00B7; Prototype &#x00B7; A11y</div></div>
+        </div>
+        <div class="cs-chips">
+          <span class="cs-chip r">Solo Designer + Dev</span>
+          <span class="cs-chip">8 Screens</span>
+          <span class="cs-chip">Zero Dependencies</span>
+          <span class="cs-chip">WCAG AA</span>
+          <span class="cs-chip">Score 8.8/10</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-body">
+
+      <div class="cs-section">
+        <div class="cs-sec-label">01 &#x2014; The Problem</div>
+        <h3>REMOTE WORK REMOVED THE SIGNALS THAT USED TO TELL YOU HOW YOU FEEL.</h3>
+        <p>The commute used to decompress you. The walk between meetings reset your nervous system. The end-of-day handshake told your brain the workday was over. Remote work eliminated every one of these transitions &#x2014; and replaced them with an unbroken stream of screen time where work stress and rest blur together into something people call burnout.</p>
+        <p>I spent two weeks auditing the wellness app landscape. Two dominant failure patterns &#x2014; and both miss the actual problem.</p>
+        <div class="cs-grid2">
+          <div class="cs-card">
+            <div class="cs-card-num">P1</div>
+            <div class="cs-card-title">Clinical Tracking Feels Like Performance</div>
+            <p>Apps that lead with scores, streaks leaderboards, and HRV graphs turn self-awareness into a performance review. Remote workers are already being evaluated at work. They don&#x2019;t want another measurement system &#x2014; they want to understand themselves, not audit themselves.</p>
+          </div>
+          <div class="cs-card">
+            <div class="cs-card-num">P2</div>
+            <div class="cs-card-title">Motivational Fluff Has Zero Credibility</div>
+            <p>&#x201C;You&#x2019;ve got this!&#x201D; push notifications and generic breathing prompts are ignored within a week. There&#x2019;s no mechanism, no personalisation, no connection to what&#x2019;s actually happening in the user&#x2019;s day. Wellness apps that don&#x2019;t cite a reason don&#x2019;t change behaviour.</p>
+          </div>
+          <div class="cs-card">
+            <div class="cs-card-num">P3</div>
+            <div class="cs-card-title">The Real Gap: Emotional Awareness as Practice</div>
+            <p>Neither approach addresses the root need: people working remotely don&#x2019;t have a daily ritual for noticing how they feel. Not measuring it. Not optimising it. Just noticing it &#x2014; and connecting it to what&#x2019;s driving it. That is the product gap Pulse is designed to fill.</p>
+          </div>
+          <div class="cs-card">
+            <div class="cs-card-num">Goal</div>
+            <div class="cs-card-title">The Design Brief I Set Myself</div>
+            <p>90 seconds. Evidence-based. Pattern-forming. The check-in should be so fast and specific that skipping it feels like the effort. Every suggestion must cite a real mechanism. The app cannot feel like homework &#x2014; it has to feel like a mirror.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-section">
+        <div class="cs-sec-label">02 &#x2014; Design Decisions</div>
+        <h3>FIVE CHOICES THAT DEFINE THE PRODUCT.</h3>
+        <p>Every decision below was questioned, reconsidered, and re-defended at least once. These are not stylistic choices &#x2014; they are functional positions.</p>
+
+        <div class="cs-callout">
+          <p>&#x201C;Four emotional states, not ten. The check-in happens at the moment of lowest cognitive bandwidth. Decision paralysis at that moment is a product failure.&#x201D;</p>
+        </div>
+
+        <div class="cs-grid2">
+          <div class="cs-card">
+            <div class="cs-card-num">D1</div>
+            <div class="cs-card-title">Four States, Not Ten</div>
+            <p><strong>Good &#x00B7; Calm &#x00B7; Stretched &#x00B7; Heavy.</strong> These four cover the practical range of remote worker emotional experience without requiring introspection. You don&#x2019;t need to know the difference between anxious and stressed &#x2014; you know if you&#x2019;re stretched. The simplicity is the design.</p>
+          </div>
+          <div class="cs-card">
+            <div class="cs-card-num">D2</div>
+            <div class="cs-card-title">The Mood Blob as Hero</div>
+            <p>The home screen has one dominant element: an animated organic blob that breathes at rest and transforms in colour after each check-in. After a check-in, the entire home screen ambient gradient shifts to match the emotional state. The design gives you something to look at that mirrors how you feel.</p>
+          </div>
+          <div class="cs-card">
+            <div class="cs-card-num">D3</div>
+            <div class="cs-card-title">Icons Only on Nav &#x2014; No Labels</div>
+            <p>Labels at tab bar scale create competing visual weight between text and icon. Removing labels forces each icon to be legible on its own &#x2014; which produces better icons. The active state is one signal: a soft brand-coloured pill behind the icon. No lift, no glow, no pip. This is the harder, more confident call.</p>
+          </div>
+          <div class="cs-card">
+            <div class="cs-card-num">D4</div>
+            <div class="cs-card-title">Evidence-Based Copy, Always</div>
+            <p>&#x201C;A 5-minute walk resets your cortisol&#x201D; becomes &#x201C;physical movement cuts perceived stress by up to 40%.&#x201D; Every suggestion cites a real mechanism: Huberman, Schwartz, Seligman at Penn, Stanford breathing research, Csikszentmihalyi, MIT Work Lab. Specific claims build trust. Generic affirmations erode it.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-section">
+        <div class="cs-sec-label">03 &#x2014; Icon System</div>
+        <h3>THE WAVEFORM IS THE BRAND.</h3>
+        <p>The app is called <em>Pulse</em>. The most defensible icon system for a product called Pulse is a pulse waveform &#x2014; the brand mark, expressed differently for each emotional state. All four icons were designed from scratch. No library. No stock icon repurposed.</p>
+
+        <div class="cs-callout">
+          <p>&#x201C;One shared vocabulary: a horizontal waveform line whose character changes to communicate each state. The system works because the form is the content &#x2014; the Stretched icon looks stretched. The Heavy icon looks heavy.&#x201D;</p>
+        </div>
+
+        <div class="cs-grid2">
+          <div class="cs-card">
+            <div class="cs-card-num" style="color:#2DB87A">Good</div>
+            <div class="cs-card-title">Tall Single Spike</div>
+            <p>High energy, decisive, upward. One confident peak &#x2014; a clear signal, nothing ambiguous. The waveform reads as a heartbeat at its best.</p>
+          </div>
+          <div class="cs-card">
+            <div class="cs-card-num" style="color:#3D9BE8">Calm</div>
+            <div class="cs-card-title">Low Even Undulation</div>
+            <p>Small, regular, gentle oscillation. Settled rhythm &#x2014; nothing forcing itself. The waveform is present but not demanding attention.</p>
+          </div>
+          <div class="cs-card">
+            <div class="cs-card-num" style="color:#F07040">Stretched</div>
+            <div class="cs-card-title">Rapid Compressed Noise</div>
+            <p>Too many peaks, no space between them, compressed into the full width. Visually overwhelming &#x2014; because that is the feeling. The form is the content.</p>
+          </div>
+          <div class="cs-card">
+            <div class="cs-card-num" style="color:#E0609A">Heavy</div>
+            <div class="cs-card-title">One Weighted Dip</div>
+            <p>A single slow descent &#x2014; gravity, not chaos. The waveform does not spike, it settles. Density without noise. Weight without panic.</p>
+          </div>
+        </div>
+
+        <p style="margin-top:20px">The system appears at 9 surfaces: check-in tiles, home entry badges, history badges, home mood blob (72px), summary hero (80px), week strip dots (16px), trends mood breakdown, week view, and onboarding cards. Icons inject as inline SVG via <code>innerHTML</code> &#x2014; resolution-independent at every size.</p>
+      </div>
+
+      <div class="cs-section">
+        <div class="cs-sec-label">04 &#x2014; Design System</div>
+        <h3>ONE TOKEN. ONE TRUTH. ZERO HARDCODED HEX.</h3>
+        <p>The system runs on CSS custom properties &#x2014; no preprocessor, no build step. Every colour, spacing value, radius, and shadow is a named decision. Zero hardcoded hex values outside the <code>:root</code> definition. 36 colour tokens. 5 type scale tokens. 6 spacing tokens. 5 radius tokens.</p>
+
+        <div class="cs-table-wrap">
+        <table class="cs-table">
+          <thead><tr><th>Layer</th><th>Token</th><th>Value</th><th>Role</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Layer"><strong>Base</strong></td><td data-label="Token">--bg</td><td data-label="Value">#F2EEE6</td><td data-label="Role">App background &#x2014; warm white, WCAG 2.1 tested</td></tr>
+            <tr><td data-label="Layer"><strong>Ink</strong></td><td data-label="Token">--ink-1 &#x2192; --ink-5</td><td data-label="Value">#1A1714 &#x2192; #C8C2BA</td><td data-label="Role">5-step text scale. ink-1 = 15.4x AAA, ink-3 = 5.0x AA</td></tr>
+            <tr><td data-label="Layer"><strong>Brand</strong></td><td data-label="Token">--brand</td><td data-label="Value">#5855D6</td><td data-label="Role">4.9x on bg &#x2014; AA. CTAs, active states, focus rings</td></tr>
+            <tr><td data-label="Layer"><strong>States</strong></td><td data-label="Token">--G / --C / --S / --H</td><td data-label="Value">4 semantic colours</td><td data-label="Role">Good / Calm / Stretched / Heavy. Each has 3 alpha variants</td></tr>
+            <tr><td data-label="Layer"><strong>Type</strong></td><td data-label="Token">--t-xs &#x2192; --t-xl</td><td data-label="Value">10px &#x2192; 52px</td><td data-label="Role">5 UI sizes + 8 display sizes. DM Serif / DM Sans / DM Mono</td></tr>
+            <tr><td data-label="Layer"><strong>Space</strong></td><td data-label="Token">--s8 &#x2192; --s64</td><td data-label="Value">8px grid</td><td data-label="Role">All gaps and margins on the 8px grid. Zero off-grid values</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="cs-section">
+        <div class="cs-sec-label">05 &#x2014; Screen Architecture</div>
+        <h3>EIGHT SCREENS. TWO ENVIRONMENTS. ONE FILE.</h3>
+        <p>Desktop: a centred 430px phone frame with 48px border-radius bevel and layered box-shadow. Mobile: screens become block-flow elements, the fake status bar hides, the nav bar switches to <code>position:fixed</code>, and all top paddings use <code>env(safe-area-inset-top)</code> to clear the notch on iOS.</p>
+
+        <div class="cs-stats">
+          <div class="cs-stat"><div class="cs-stat-n">8</div><div class="cs-stat-l">Screens</div></div>
+          <div class="cs-stat"><div class="cs-stat-n">52</div><div class="cs-stat-l">JS Functions</div></div>
+          <div class="cs-stat"><div class="cs-stat-n">13</div><div class="cs-stat-l">Live Interactions</div></div>
+          <div class="cs-stat"><div class="cs-stat-n">8.8</div><div class="cs-stat-l">Design Score /10</div></div>
+        </div>
+
+        <div class="cs-grid2">
+          <div class="cs-card">
+            <div class="cs-card-num">OB</div>
+            <div class="cs-card-title">Onboarding &#x2014; 4 Slides</div>
+            <p>Animated brand waveform mark, mood state preview, pattern explanation, name input. Swipe or button to advance. Dots indicator. State persists across sessions via localStorage.</p>
+          </div>
+          <div class="cs-card">
+            <div class="cs-card-num">HM</div>
+            <div class="cs-card-title">Home &#x2014; Blob Hero</div>
+            <p>172px animated organic blob, week strip built from live date (future days always empty), 6-step CTA, insight card, best-day card, 3 recent entries, quote. Full header gradient shifts post check-in.</p>
+          </div>
+          <div class="cs-card">
+            <div class="cs-card-num">CI</div>
+            <div class="cs-card-title">Check-In &#x2014; 6 Steps</div>
+            <p>Emotion tiles &#x2192; draggable focus arc ring &#x2192; factor chips &#x2192; lifestyle tracking (tap to increment) &#x2192; gratitude log (3 inputs) &#x2192; freeform note. Under 90 seconds average.</p>
+          </div>
+          <div class="cs-card">
+            <div class="cs-card-num">SU</div>
+            <div class="cs-card-title">Summary &#x2014; Hero Moment</div>
+            <p>Full-bleed state gradient with dot-grid overlay, 200px breathing blob, 52px wellness percentage counting up from zero, CBT reframe, gratitude display, lifestyle display, contextual suggestion.</p>
+          </div>
+          <div class="cs-card">
+            <div class="cs-card-num">BR</div>
+            <div class="cs-card-title">Breathe &#x2014; 3 Patterns</div>
+            <p>Box 4-4-4, 4-7-8, Simple 5-5. Animated orb phases through inhale / hold / exhale with auto phase sequencing. Stop/reset button swaps in when breathing starts.</p>
+          </div>
+          <div class="cs-card">
+            <div class="cs-card-num">TR</div>
+            <div class="cs-card-title">Trends &#x2014; Pattern View</div>
+            <p>80px dominant stat hero, mood correlation card, week bar chart, animated focus chart with colour-coded levels, 30-day heatmap with day numbers and tap-to-detail bottom sheet overlay.</p>
+          </div>
+          <div class="cs-card">
+            <div class="cs-card-num">HI</div>
+            <div class="cs-card-title">History &#x2014; Entry Log</div>
+            <p>Mini mood bar chart in header, expandable entries with left-border state stripes, gratitude display, factor tags, focus scores. Groups by recency. Touch-action:pan-y for mobile scroll.</p>
+          </div>
+          <div class="cs-card">
+            <div class="cs-card-num">ST</div>
+            <div class="cs-card-title">Settings &#x2014; Full Persistence</div>
+            <p>Toggle states persist to localStorage. Reminder time picker with AM/PM. JSON data export. Delete all with confirm guard. Name edit inline. Chain-link streak icon.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-section">
+        <div class="cs-sec-label">06 &#x2014; Interactions</div>
+        <h3>EVERY BUTTON DOES SOMETHING REAL.</h3>
+        <p>13 interactions verified working across desktop and mobile. None are decorative &#x2014; each serves a feedback, navigation, or data function.</p>
+
+        <div class="cs-table-wrap">
+        <table class="cs-table">
+          <thead><tr><th>Interaction</th><th>Mechanism</th><th>Purpose</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Interaction"><strong>Wellness % count-up</strong></td><td data-label="Mechanism">setInterval + step increment</td><td data-label="Purpose">Score feels earned, not assigned</td></tr>
+            <tr><td data-label="Interaction"><strong>Streak bounce</strong></td><td data-label="Mechanism">CSS animation class toggle</td><td data-label="Purpose">Reinforces habit loop on milestone</td></tr>
+            <tr><td data-label="Interaction"><strong>Tile colour flood</strong></td><td data-label="Mechanism">Radial gradient ::after + opacity</td><td data-label="Purpose">Tactile selection feedback on emotion tiles</td></tr>
+            <tr><td data-label="Interaction"><strong>Progress shimmer</strong></td><td data-label="Mechanism">CSS translateX animation</td><td data-label="Purpose">Active state signal on CI progress bar</td></tr>
+            <tr><td data-label="Interaction"><strong>Focus bar animation</strong></td><td data-label="Mechanism">requestAnimationFrame + data-h</td><td data-label="Purpose">Bars animate from 0 after screen paint</td></tr>
+            <tr><td data-label="Interaction"><strong>Heatmap day overlay</strong></td><td data-label="Mechanism">Frame-level position:absolute</td><td data-label="Purpose">Day detail on tap &#x2014; date, mood, focus score</td></tr>
+            <tr><td data-label="Interaction"><strong>Breathe phase sequencer</strong></td><td data-label="Mechanism">setTimeout chain + CSS class</td><td data-label="Purpose">Auto-advances inhale / hold / exhale phases</td></tr>
+            <tr><td data-label="Interaction"><strong>Toggle persistence</strong></td><td data-label="Mechanism">localStorage serialisation</td><td data-label="Purpose">Settings survive browser reload</td></tr>
+            <tr><td data-label="Interaction"><strong>Time picker</strong></td><td data-label="Mechanism">Bottom sheet overlay + AM/PM</td><td data-label="Purpose">Full reminder time configuration</td></tr>
+            <tr><td data-label="Interaction"><strong>JSON export</strong></td><td data-label="Mechanism">Blob URL + anchor click</td><td data-label="Purpose">Privacy-respecting data portability</td></tr>
+            <tr><td data-label="Interaction"><strong>CI abandon guard</strong></td><td data-label="Mechanism">confirm() on step &gt; 1</td><td data-label="Purpose">Prevents accidental progress loss</td></tr>
+            <tr><td data-label="Interaction"><strong>Week strip</strong></td><td data-label="Mechanism">new Date() + todayIdx</td><td data-label="Purpose">Future days always empty &#x2014; no fake data</td></tr>
+            <tr><td data-label="Interaction"><strong>Quote persistence</strong></td><td data-label="Mechanism">localStorage qIdx</td><td data-label="Purpose">Quote index survives reload</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="cs-section">
+        <div class="cs-sec-label">07 &#x2014; Accessibility</div>
+        <h3>WCAG 2.1 AA. TESTED PAIR BY PAIR.</h3>
+        <p>Every critical text pair was tested against the <code>#F2EEE6</code> background and <code>#FFFFFF</code> card surface. All primary reading text passes AAA. All interactive text passes AA. The two below-AA values are decorative metadata &#x2014; explicitly exempted by WCAG &#167;1.4.3.</p>
+
+        <div class="cs-stats">
+          <div class="cs-stat"><div class="cs-stat-n">15.4x</div><div class="cs-stat-l">Headlines (AAA)</div></div>
+          <div class="cs-stat"><div class="cs-stat-n">10.0x</div><div class="cs-stat-l">Body Text (AAA)</div></div>
+          <div class="cs-stat"><div class="cs-stat-n">5.7x</div><div class="cs-stat-l">Brand on White (AA)</div></div>
+          <div class="cs-stat"><div class="cs-stat-n">5.0x</div><div class="cs-stat-l">Secondary Text (AA)</div></div>
+        </div>
+
+        <p>Focus indicators use a 2px brand outline at 4.9x on the background and 5.7x on white &#x2014; both passing AA. All interactive elements have <code>:focus-visible</code> states. ARIA roles, keyboard navigation, and screen reader structure implemented throughout. <code>viewport-fit=cover</code> meta tag ensures <code>env(safe-area-inset-top)</code> returns accurate values on notched iPhones.</p>
+      </div>
+
+      <div class="cs-section">
+        <div class="cs-sec-label">08 &#x2014; Outcomes &amp; Reflection</div>
+        <h3>WHAT THE SCORE DOES NOT CAPTURE.</h3>
+        <p>The project scored 8.8/10 against a mid-senior design audit rubric. The gaps identified were honest ones: no real check-in data persistence between sessions (history and trends show demo data), no empty-state designs for day one, and an icon size scale that could be tightened further.</p>
+
+        <div class="cs-callout">
+          <p>&#x201C;This reads as a senior designer&#x2019;s work. The concept is defensible, the feature set shows domain research, the icon system is original, and the summary screen is genuinely distinctive. The gaps that remain are system gaps &#x2014; not craft gaps.&#x201D;</p>
+        </div>
+
+        <p>The single decision I&#x2019;m most confident in is the waveform icon system. It is motivated by the product name, functions as a coherent visual language across 9 surfaces, and does not exist in any other wellness app&#x2019;s visual vocabulary. That is what makes it defensible in a design crit &#x2014; not just that it looks good, but that there is a reason it could not be anything else.</p>
+        <p>What I would do differently: implement localStorage check-in persistence from the start so the trends and history screens reflect real user data. That single change closes the largest gap between prototype and product &#x2014; and moves the score to 9+.</p>
+      </div>
+
+    </div>
+
+    <div class="cs-cta-bar">
+      <a href="https://tsachkarski.github.io/Pulse" target="_blank" rel="noopener" class="btn-manga"><span>View Live Project &#x2197;</span></a>
+      <a href="https://github.com/TSachkarski/Pulse" target="_blank" rel="noopener" class="btn-manga"><span>GitHub &#x2197;</span></a>
+      <button class="btn-outline-manga" onclick="closeCS('pulse');openCS('forma')"><span class="arr">&#x2190;</span> Prev: Forma</button>
+    </div>
+  </div>
+</div>
+
 
 <script>
 // ── CASE STUDY OVERLAY SYSTEM ──
